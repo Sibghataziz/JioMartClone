@@ -1,31 +1,41 @@
-import { useParams } from "react-router-dom";
 import useAPICall from "../../CustomHooks/useAPICall";
 import {
   GET_PRODUCTS_SUCCESS,
   GET_PRODUCTS_ERROR,
-  GET_PRODUCTS_LOADING
+  GET_PRODUCTS_LOADING,
+  GET_PRODUCTS_INIFINITE
 } from "./actionTypes";
-
 
 export const getProductsSuccess = (data) => ({
   type: GET_PRODUCTS_SUCCESS,
-  payload: data
+  payload: data,
 });
 
 export const getProductError = () => ({
-  type: GET_PRODUCTS_ERROR
+  type: GET_PRODUCTS_ERROR,
 });
 
 export const getProductLoading = () => ({
-  type: GET_PRODUCTS_LOADING
+  type: GET_PRODUCTS_LOADING,
 });
 
-export const getProducts =async ()=> async(dispatch) =>{
-  const {baseUrl, getData} = useAPICall()
-  const {item_category} = useParams()
+export const getProductsInfinite = (data) => ({
+  type: GET_PRODUCTS_INIFINITE,
+  payload: data,
+});
 
-  dispatch(getProductLoading())
-  const data =await getData(`${baseUrl}/products?item_category=${item_category}`)
-  data ? getProductsSuccess(data) : getProductError()
+
+
+export const getProducts = (url) => async (dispatch) => {
+  const { getDataWithTotal } = useAPICall();
+
+  dispatch(getProductLoading());
+  const data = await getDataWithTotal(url);
+  data ? dispatch(getProductsSuccess(data)) : dispatch(getProductError());
+};
+
+export const getInfiniteProducts = (url) => async(dispatch)=>{
+  const { getData } = useAPICall();
+  const data = await getData(url);
+  data ? dispatch(getProductsInfinite(data)) : dispatch(getProductError());
 }
-
