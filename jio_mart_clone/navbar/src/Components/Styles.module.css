@@ -1,0 +1,32 @@
+.navlist{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    border: 1px solid black;
+    background-color: #ececed;
+    
+}
+.navlist ul{
+    list-style: none;
+    
+    
+}
+
+.navlist>ul{
+    padding: 0%;
+    margin: 0;
+    display: inline-block;
+    
+    color: #000;
+}
+.navlist>ul>li{
+    position: relative;
+    cursor: pointer;
+    float: left;
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+}
+
+
+

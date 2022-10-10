@@ -21,7 +21,7 @@ const LeftDrawer = (props) => {
           
           <Drawer
             isOpen={isOpen}
-            placement='right'
+            placement='left'
             onClose={onClose}
             finalFocusRef={btnRef}
           >

@@ -1,38 +1,106 @@
-import { Flex, Box } from "@chakra-ui/react"
+
 import {ChevronDownIcon} from '@chakra-ui/icons';
+import  Styles  from "./Styles.module.css";
 
 const Navlist =()=>{
     return (
-        <Flex bg='#ececed' h="40px" pl="110px" pr='110px' align="center" justify="space-evenly" color="#000">
-            <Box display="flex">
-                Groceries
-                <ChevronDownIcon/>
-            </Box>
-            <Box display="flex">
-                Premium Fruits
-                <ChevronDownIcon/>
-            </Box>
-            <Box display="flex">
-                Home & Kitchen
-                <ChevronDownIcon/>
-            </Box>
-            <Box display="flex">
-                Fashion
-                <ChevronDownIcon/>
-            </Box>
-            <Box display="flex">
-                Electronics
-                <ChevronDownIcon/>
-            </Box>
-            <Box display="flex">
-                Beauty
-                <ChevronDownIcon/>
-            </Box>
-            <Box display="flex">
-                Jewellery
-                <ChevronDownIcon/>
-            </Box>
-        </Flex>
+        <div className={Styles.navlist}>
+            <ul>
+                <li>
+                    Groceries
+                    <ChevronDownIcon/>
+                    <ul>
+                        <li>Fruits & Vegetables</li>
+                        <li>Dairy & Bakery</li>
+                        <li>Staples</li>
+                        <li>Snacks & Branded foods</li>
+                        <li>Beverages</li>
+                        <li>Personal Care</li>
+                        <li>Home Care</li>
+                        <li>Beauty</li>
+                    </ul>
+                </li>
+                <li>
+                    Premium Fruits
+                    <ChevronDownIcon/>
+                    <ul>
+                        <li>Apples & Peers</li>
+                        <li>Avocado, Peach, Plum</li>
+                        <li>Banana,Melons & Coconut</li>
+                        <li>Dates</li>
+                        <li>Citrus, Mangoes & Graps</li>
+                        <li>Cherries, Berries</li>
+                        <li>Exotic Fruits</li>
+                        <li>Seasonal & Minor Fruits</li>
+                    </ul>
+                </li>
+                <li>
+                    Home & Kitchen
+                    <ChevronDownIcon/>
+                    <ul>
+                        <li>Kitchenware</li>
+                        <li>Dining</li>
+                        <li>Electricals</li>
+                        <li>furniture</li>
+                        <li>Home Appliances</li>
+                        <li>Toys & Games</li>
+                        <li>Disposable</li>
+                        <li>Stationary</li>
+                        <li>Garden</li>
+                        <li>pooja needs</li>
+                    </ul>
+                </li>
+                <li>
+                    Fashion
+                    <ChevronDownIcon/>
+                    <ul>
+                        <li>Mens</li>
+                        <li>Womens</li>
+                        <li>Boys</li>
+                        <li>Girls</li>
+                        <li>Junior Boys</li>
+                        <li>Infant</li>
+                    </ul>
+                </li>
+                <li>
+                    Electronics
+                    <ChevronDownIcon/>
+                    <ul>
+                        <li>Mobiles & Tablets</li>
+                        <li>TV & speakers</li>
+                        <li>Home Appliance</li>
+                        <li>Camera</li>
+                        <li>Kitchen Appliance</li>
+                        <li>Smart Devices</li>
+                        <li>Phones</li>
+                        <li>Office Products</li>
+                        <li>Electronic Musical Instruments</li>
+                    </ul>
+                </li>
+                <li>
+                    Beauty
+                    <ChevronDownIcon/>
+                    <ul>
+                        <li>Make Up</li>
+                        <li>Skincare</li>
+                        <li>Personal Care</li>
+                        <li>Fragrances</li>
+                        <li>Mom & Baby</li>
+                        <li>Mens Grooming</li>
+                        <li>Wellness</li>
+                    </ul>
+                </li>
+                <li>
+                    Jewellery
+                    <ChevronDownIcon/>
+                    <ul>
+                        <li>Fine Jwellery </li>
+                        <li>Jwellery</li>
+                    </ul>
+                </li>
+            </ul>
+            
+        </div>
     )
 }
 export default Navlist
