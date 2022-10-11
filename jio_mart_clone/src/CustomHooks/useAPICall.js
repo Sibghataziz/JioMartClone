@@ -32,6 +32,23 @@ export default function useAPICall() {
     }
   };
 
+  const getDataWithTotal = async (url) => {
+    try {
+      const res = await fetch(url);
+      // console.log(res)
+      // console.log(res.headers.get('X-Total-Count'), "total")
+      if (res.status === 200) {
+        const data = await res.json();
+        // console.log(data)
+        return [res.headers.get('X-Total-Count'),data];
+      } else {
+        return false;
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const patchRequest = async (url,item) => {
     try {
       const res = await fetch(url, {
@@ -66,5 +83,5 @@ export default function useAPICall() {
     }
   }
 
-  return { baseUrl, postData, getData, patchRequest, deleteData };
+  return { baseUrl, postData, getData, patchRequest, deleteData, getDataWithTotal };
 }
