@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import useAPICall from '../CustomHooks/useAPICall'
+import ProductDetails from './ProductDetails/ProductDetails'
 
 export default function ListOfProducts() {
   const [products, setProducts] = useState([])
@@ -15,6 +16,7 @@ export default function ListOfProducts() {
   return (
     <Box>
       AllProducts
+      <ProductDetails />
     </Box>
   )
 }
