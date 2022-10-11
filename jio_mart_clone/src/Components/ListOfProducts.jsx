@@ -1,12 +1,12 @@
-import { Box, Container } from "@chakra-ui/react";
+import { Box, Button, Center, Container, SimpleGrid, Spinner } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import useAPICall from "../CustomHooks/useAPICall";
 import { getProducts, getInfiniteProducts } from "../Redux/Products/action";
-import Product from "./Product";
 import InfiniteScroll from "react-infinite-scroll-component";
+import ProductItem from "./ProductItem";
 
-export default function ListOfProducts() {
+export default function ListOfProducts({windowWidth}) {
   const dispatch = useDispatch();
   const { total, loading, error, products } = useSelector((state) => state);
   const { baseUrl } = useAPICall();
@@ -39,29 +39,31 @@ export default function ListOfProducts() {
   // console.log(total!==products.length)
 
   return (
-    <Box>
-      AllProducts
+    <Box bg="white" p={5}>
+      <h4 style={{ margin: "10px 10px" }}>ALL PRODUCTS</h4>
       {loading ? (
         <h1>Loading......</h1>
       ) : error ? (
         <h1>error......</h1>
       ) : (
-        <Container>
+        <Box>
           <InfiniteScroll
             style={{ overflowY: "hidden" }}
             dataLength={products.length}
             next={getMoreProducts}
             hasMore={total !== products.length}
-            loader={<h4>Loading...</h4>}
+            loader={<Center><Spinner/></Center>}
             scrollThreshold="100%"
           >
-            <Container>
+            <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} width="100%">
               {products.map((product) => (
-                <Product key={product.id} {...product} />
+                <ProductItem key={product.id} {...product} windowWidth={windowWidth}/>
               ))}
-            </Container>
+            </SimpleGrid>
           </InfiniteScroll>
-        </Container>
+          {total !== products.length ?<Center><Button bg='#42A8D6' colorScheme="white" mt={5}>Show More Results</Button></Center>: null}
+          
+        </Box>
       )}
     </Box>
   );
