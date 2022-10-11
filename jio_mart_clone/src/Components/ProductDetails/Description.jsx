@@ -7,7 +7,7 @@ export default function Description() {
     const handleToggle = () => setShow(!show)
   
     return (
-      <Box m='auto' width='80%'>
+      <Box m='auto' width='90%'>
         <Heading size='80px'>Description</Heading>
         <Collapse startingHeight={20} in={show}>
           Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
