@@ -1,7 +1,9 @@
 import React from 'react';
-import {Box, Spacer, Flex, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Grid, GridItem,Image, Heading,Text, Button } from "@chakra-ui/react"
+import {Box, Spacer, Flex, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Grid, GridItem,Image, Heading,Text, Button, Input } from "@chakra-ui/react"
 import {ChevronRightIcon, AddIcon} from "@chakra-ui/icons"
 import Description from './Description';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 const products = {
     "item_name": "Saffola Gold Refined Rice Bran And Sunflower Based Blended Oil 3 L + Daawat Devaaya Basmati Rice 5 kg (Combo Pack)",
@@ -28,7 +30,38 @@ const products = {
 }
 
 
+
 export default function ProductDetails() {
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState(false)
+    const [data, setData] = useState({})
+    useEffect(()=>{
+        setLoading(true)
+        fetch("http://localhost:3004/products/1")
+        .then(res => res.json())
+        .then((res => {
+            console.log("res",res)
+            setData(res)
+            
+        }))
+        .catch((error)=>{
+            console.log(error)
+            setError(true)
+        })
+        .finally(()=> {setLoading(false)
+        setError(false)})
+    },[])
+    console.log("Data", data)
+
+    if(loading){
+        return (
+            <>454
+            '
+            4
+            s</>
+        )
+    }
+
   return (
     <Box>
        
@@ -88,11 +121,17 @@ export default function ProductDetails() {
             <Text color={'gray.700'} as={'samp'}>Inaugural Offer<Text color={'black'} as={'b'} > Free Shipping</Text></Text>
             <Spacer/>
             <Image w='120px' src='https://e7.pngegg.com/pngimages/739/826/png-clipart-logo-credit-card-payment-card-american-express-credit-card-text-display-advertising.png' />
-            <Button mt='20px' h='35px' colorScheme='blue'>Add to Cart +</Button>
+            <Button mt='20px' mb='15px' h='35px' colorScheme='blue'>Add to Cart +</Button>
+            <Spacer />
+            <Text mt={'20px'} color={'black'} as={'b'} >Delivery</Text>
+             <Spacer />
+            <Input border='0' borderBottom='2px solid gray' mt={'10px'} addon='Pin' h='30px' w='150px' placeholder='Basic usage' value='249407' />
+            <Text as='b' color='red' fontSize='15px'>CHECK</Text>
+            <Text fontSize='12px'>Check for estimated delivery date</Text>
         </Box>
         </Flex>
 
-        <hr style={{ "color": "black",  "width": "90%","margin":"auto","marginTop" : "20px"}} />
+        <hr style={{ "color": "black",  "width": "90%","margin":"auto","marginTop" : "30px", "marginBottom": "30px"}} />
 
         
 
