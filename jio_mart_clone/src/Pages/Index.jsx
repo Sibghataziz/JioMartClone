@@ -1,20 +1,32 @@
-import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react"
+import { Box, Button, Flex, Heading, Link, Text } from "@chakra-ui/react"
+import ShopCategory from "../HomePage/Slide/ShopCategory";
+import TopDealSlides from "../HomePage/Slide/TopDealSlides";
 import Slider from "../HomePage/Slider";
 
 
   function Index(){
+
+
     return(
-        <Box>         
-        <Box mt="2">
-            <img src="https://www.jiomart.com/images/cms/section/images/1665073593_Countdown-Creative_1240x200_web.jpg" alt="bast_Sale" />
-        </Box>
+      <div>
+
+        <Box>     
+           {/* <Box mt="2">
+               <img src="https://www.jiomart.com/images/cms/section/images/1665073593_Countdown-Creative_1240x200_web.jpg" alt="bast_Sale" />
+           </Box> */}
+
         <Box mt={2}>
-            <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1654714506_Free-Home-Delivery--strip-1240-X-162.jpg" alt="lowerBaner "/>
-        </Box>
-        <Flex>
+                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1654714506_Free-Home-Delivery--strip-1240-X-162.jpg" alt="lowerBaner "/>
+           </Box>
+
+          <Flex mt={'2'}>
             <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1665425391_Camp-A-Desktop.jpg" alt="" />
-        </Flex>
-  
+          </Flex>
+
+        <Box mt={2}>
+                <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1662531217_Wednesday_Bonus.jpg" alt="lowerBaner "/>
+           </Box>
+
           <Box>
             <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1664448687_Image_3.jpg" alt="" />
           </Box>
@@ -23,31 +35,18 @@ import Slider from "../HomePage/Slider";
             <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1665072906_Oct-6_Slim-Banner_web.jpg" alt="" />
           </Box>
 
-          <Heading>Shop from Top Categories</Heading>
+        {/* ShopCategory ======>*/}
+             <ShopCategory/>
         
-        <Flex>
-          <Box>
-            <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1661329065_02--Shop-From-Top-Categories-Kitchen-Appliances.jpg" alt="" />
-          </Box>
-          <Box>
-            <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1661329189_02--Shop-From-Top-Categories-audio.jpg" alt="" />
-          </Box>
-          <Box>
-             <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1657109495_1654018730_Smartphones.jpg" alt="" />
-          </Box>
-          <Box>
-            <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1657109344_1654018675_Mens-Wear.jpg" alt="" />
-          </Box>
-          <Box>
-            <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1657109379_1654018684_Womens-Wear.jpg" alt="" />
-          </Box>
-          </Flex>
 
-          <Box>
+        <Link to="./"><Box>
             <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1624041574_web_static.jpg" alt="" />
-          </Box >
+          </Box ></Link>
 
-          <Text as='b'>Top Deals</Text>
+           <Text as='b'  fontSize='xl' m="3rem" marginY={'3rem'}>Top Deals</Text>
+             
+          {/* Top Deals====> */}
+             <TopDealSlides/>
              
              <Flex >
                 <Box border="1px solid black" m={'2'} >
@@ -77,7 +76,8 @@ import Slider from "../HomePage/Slider";
 
              </Flex>
 
-        </Box>
+            </Box>
+        </div>
     )
   }
   export default Index;
