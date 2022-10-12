@@ -14,6 +14,9 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 
+const capitalize = (word) =>
+  `${word[0].toUpperCase()}${word.substring(1, word.length)}`;
+
 const intiState = {
   Popularity: true,
   desc: false,
@@ -56,14 +59,18 @@ const filterList = {
   makeup: ["Lipcare", "Cosmetics", "accessories", "Skincare"],
 };
 
-export default function MiniSort() {
+export default function MiniSort({
+  product_category,
+  handleUrlFilter,
+  urlFilter,
+}) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [hover, setHover] = useState(intiState);
   const [active, setActive] = useState(intiState);
   const [navActive, setNavActive] = useState("Availability");
   const optionList = {
     Availability: ["InStock Products"],
-    Categories: filterList["makeup"],
+    Categories: filterList[product_category],
   };
   const listOfOptions = optionList[navActive];
 
@@ -94,13 +101,44 @@ export default function MiniSort() {
     // console.log(e.target.name)
     setHover({ ...falsyState });
     setActive({ ...falsyState, [e.target.name]: true });
+    const newFilter = {
+      Availability: urlFilter.Availability,
+      Categories: urlFilter.Categories,
+      Price: urlFilter.Price,
+      DiscountRange: urlFilter.DiscountRange,
+      Discount: e.target.name === "discount" ? true : null,
+      sort:
+        e.target.name === "asc" || e.target.name === "desc"
+          ? e.target.name
+          : null,
+    };
+    handleUrlFilter(newFilter);
   };
 
   const handleNavClick = (e) => {
     // console.log(e.target.name);
-    setNavActive(e.target.name)
+    setNavActive(e.target.name);
   };
 
+  const handleChange = (e) => {
+    const { name, checked } = e.target;
+    // console.log(name,checked)
+    if (name === "Availability") {
+      handleUrlFilter({ ...urlFilter, [name]: checked });
+    } else {
+      if (checked) {
+        handleUrlFilter({
+          ...urlFilter,
+          ["Categories"]: [...urlFilter.Categories, name],
+        });
+      } else {
+        const newCategories = urlFilter.Categories.filter(
+          (category) => category !== name
+        );
+        handleUrlFilter({ ...urlFilter, ["Categories"]: newCategories });
+      }
+    }
+  };
 
   // console.log(listOfOptions)
   return (
@@ -213,7 +251,9 @@ export default function MiniSort() {
                     borderColor={"gray.100"}
                     key={ele}
                   >
-                    <Checkbox>{ele}</Checkbox>
+                    <Checkbox name={ele} onChange={handleChange}>
+                      {capitalize(ele)}
+                    </Checkbox>
                   </Box>
                 ))}
               </Box>

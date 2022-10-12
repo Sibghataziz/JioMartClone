@@ -12,6 +12,9 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
+const capitalize = (word) =>
+  `${word[0].toUpperCase()}${word.substring(1, word.length)}`;
+
 const filterList = {
   Top_Deals: ["Trending"],
   Electronics: [
@@ -38,11 +41,44 @@ const filterList = {
   makeup: ["Lipcare", "Cosmetics", "accessories", "Skincare"],
 };
 
-export default function Filters() {
-  // const slider = useRangeSlider();
-  const filters = filterList["makeup"];
+export default function Filters({
+  product_category,
+  urlFilter,
+  handleUrlFilter,
+}) {
+  const filters = filterList[product_category];
 
-  // console.log(slider);
+  const handleChange = (e) => {
+    const { name, checked } = e.target;
+    // console.log(name,checked)
+    if (name === "Availability") {
+      handleUrlFilter({ ...urlFilter, [name]: checked });
+    } else {
+      if (checked) {
+        handleUrlFilter({
+          ...urlFilter,
+          ["Categories"]: [...urlFilter.Categories, name],
+        });
+      } else {
+        const newCategories = urlFilter.Categories.filter(
+          (category) => category !== name
+        );
+        handleUrlFilter({ ...urlFilter, ["Categories"]: newCategories });
+      }
+    }
+  };
+
+  const handlePriceChange = (val) => {
+    handleUrlFilter({ ...urlFilter, ["Price"]: { min: val[0], max: val[1] } });
+  };
+
+  const handleDiscountChange = (val) => {
+    handleUrlFilter({
+      ...urlFilter,
+      ["DiscountRange"]: { min: val[0], max: val[1] },
+    });
+  };
+
   return (
     <Container mt={10} bg={"white"} pt={5} pb={5} width="90%" borderRadius={10}>
       <Heading size="md" fontWeight={"medium"} pb={4}>
@@ -54,7 +90,9 @@ export default function Filters() {
           Availability
         </Heading>
         <Box>
-          <Checkbox>InStock Products</Checkbox>
+          <Checkbox name="Availability" onChange={handleChange}>
+            InStock Products
+          </Checkbox>
         </Box>
       </Box>
       <Box>
@@ -70,7 +108,9 @@ export default function Filters() {
               borderColor={"gray.100"}
               key={filter}
             >
-              <Checkbox>{filter}</Checkbox>
+              <Checkbox name={filter} onChange={handleChange}>
+                {capitalize(filter)}
+              </Checkbox>
             </Box>
           ))}
         </Box>
@@ -79,7 +119,13 @@ export default function Filters() {
         <Heading size="sm" fontWeight={"medium"} pt={4} pb={4}>
           Price
         </Heading>
-        <RangeSlider defaultValue={[55, 99848]} min={0} max={100000} step={10} onChangeEnd={(val) => console.log(val)}>
+        <RangeSlider
+          defaultValue={[0, 99848]}
+          min={0}
+          max={100000}
+          step={10}
+          onChangeEnd={(val) => handlePriceChange(val)}
+        >
           <RangeSliderTrack bg="red.100">
             <RangeSliderFilledTrack bg="tomato" />
           </RangeSliderTrack>
@@ -91,7 +137,13 @@ export default function Filters() {
         <Heading size="sm" fontWeight={"medium"} pt={4} pb={4}>
           Discount
         </Heading>
-        <RangeSlider defaultValue={[5, 20]} min={0} max={100} step={1} onChangeEnd={(val) => console.log(val)}>
+        <RangeSlider
+          defaultValue={[0, 100]}
+          min={0}
+          max={100}
+          step={1}
+          onChangeEnd={(val) => handleDiscountChange(val)}
+        >
           <RangeSliderTrack bg="red.100">
             <RangeSliderFilledTrack bg="tomato" />
           </RangeSliderTrack>
