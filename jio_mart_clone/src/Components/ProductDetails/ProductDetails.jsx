@@ -4,6 +4,10 @@ import {ChevronRightIcon, AddIcon} from "@chakra-ui/icons"
 import Description from './Description';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Review from './Review';
+import AboutBrand from './AboutBrand';
+import FeatureDetails from './Feature&Details';
+import CheckLocation from './CheckLocation';
 
 const products = {
     "item_name": "Saffola Gold Refined Rice Bran And Sunflower Based Blended Oil 3 L + Daawat Devaaya Basmati Rice 5 kg (Combo Pack)",
@@ -125,8 +129,9 @@ export default function ProductDetails() {
             <Spacer />
             <Text mt={'20px'} color={'black'} as={'b'} >Delivery</Text>
              <Spacer />
-            <Input border='0' borderBottom='2px solid gray' mt={'10px'} addon='Pin' h='30px' w='150px' placeholder='Basic usage' value='249407' />
-            <Text as='b' color='red' fontSize='15px'>CHECK</Text>
+            <Input border='0' borderBottom='2px solid gray' mt={'10px'} addon='Pin' h='30px' w='180px' placeholder='Enter Your PinCode'  />
+            <CheckLocation />
+            {/* <Text as='b' color='red' fontSize='15px'>CHECK</Text> */}
             <Text fontSize='12px'>Check for estimated delivery date</Text>
         </Box>
         </Flex>
@@ -134,8 +139,11 @@ export default function ProductDetails() {
         <hr style={{ "color": "black",  "width": "90%","margin":"auto","marginTop" : "30px", "marginBottom": "30px"}} />
 
         
-
+        <AboutBrand />
         <Description />
+        <FeatureDetails />
+        <Review />
+        
     </Box>
   )
 }
