@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#Dummy Components
+/src/Components/DummyHome.jsx

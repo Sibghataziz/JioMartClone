@@ -18,10 +18,10 @@ const falsyState = {
   all: false,
 };
 
-export default function Sort() {
+export default function Sort({ handleUrlFilter, urlFilter }) {
   const { total, products } = useSelector((state) => state);
   const [hover, setHover] = useState(intiState);
-  const [active, setActive] = useState(intiState)
+  const [active, setActive] = useState(intiState);
 
   const spanStyle = {
     fontSize: "18px",
@@ -51,8 +51,20 @@ export default function Sort() {
   const handleMouseOut = (e) => setHover({ ...hover, [e.target.name]: false });
 
   const handleClick = (e) => {
-    setHover({ ...falsyState })
-    setActive({ ...falsyState, [e.target.name]: true })
+    setHover({ ...falsyState });
+    setActive({ ...falsyState, [e.target.name]: true });
+    const newFilter = {
+      Availability: urlFilter.Availability,
+      Categories: urlFilter.Categories,
+      Price: urlFilter.Price,
+      DiscountRange: urlFilter.DiscountRange,
+      Discount: e.target.name === "discount" ? true : null,
+      sort:
+        e.target.name === "asc" || e.target.name === "desc"
+          ? e.target.name
+          : null,
+    };
+    handleUrlFilter(newFilter);
   };
 
   return (
@@ -68,7 +80,11 @@ export default function Sort() {
           Sort by:{" "}
           <ButtonGroup spacing={2}>
             <button
-              style={hover.Popularity || active.Popularity ? buttonStyleOnHover : buttonStyle}
+              style={
+                hover.Popularity || active.Popularity
+                  ? buttonStyleOnHover
+                  : buttonStyle
+              }
               name="Popularity"
               onMouseOver={handleMouseIn}
               onMouseOut={handleMouseOut}
@@ -77,7 +93,9 @@ export default function Sort() {
               Popularity
             </button>
             <button
-              style={hover.desc || active.desc ? buttonStyleOnHover : buttonStyle}
+              style={
+                hover.desc || active.desc ? buttonStyleOnHover : buttonStyle
+              }
               name="desc"
               onMouseOver={handleMouseIn}
               onMouseOut={handleMouseOut}
@@ -95,7 +113,11 @@ export default function Sort() {
               Low to High
             </button>
             <button
-              style={hover.discount || active.discount ? buttonStyleOnHover : buttonStyle}
+              style={
+                hover.discount || active.discount
+                  ? buttonStyleOnHover
+                  : buttonStyle
+              }
               name="discount"
               onMouseOver={handleMouseIn}
               onMouseOut={handleMouseOut}
