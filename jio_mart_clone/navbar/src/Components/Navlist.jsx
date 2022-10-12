@@ -9,7 +9,7 @@ const Navlist =()=>{
                 <li>
                     Groceries
                     <ChevronDownIcon/>
-                    <ul>
+                    <ul className={Styles.dropdown}>
                         <li>Fruits & Vegetables</li>
                         <li>Dairy & Bakery</li>
                         <li>Staples</li>
@@ -23,7 +23,7 @@ const Navlist =()=>{
                 <li>
                     Premium Fruits
                     <ChevronDownIcon/>
-                    <ul>
+                    <ul className={Styles.dropdown}>
                         <li>Apples & Peers</li>
                         <li>Avocado, Peach, Plum</li>
                         <li>Banana,Melons & Coconut</li>
@@ -37,7 +37,7 @@ const Navlist =()=>{
                 <li>
                     Home & Kitchen
                     <ChevronDownIcon/>
-                    <ul>
+                    <ul className={Styles.dropdown}>
                         <li>Kitchenware</li>
                         <li>Dining</li>
                         <li>Electricals</li>
@@ -53,7 +53,7 @@ const Navlist =()=>{
                 <li>
                     Fashion
                     <ChevronDownIcon/>
-                    <ul>
+                    <ul className={Styles.dropdown}>
                         <li>Mens</li>
                         <li>Womens</li>
                         <li>Boys</li>
@@ -65,7 +65,7 @@ const Navlist =()=>{
                 <li>
                     Electronics
                     <ChevronDownIcon/>
-                    <ul>
+                    <ul className={Styles.dropdown}>
                         <li>Mobiles & Tablets</li>
                         <li>TV & speakers</li>
                         <li>Home Appliance</li>
@@ -80,7 +80,7 @@ const Navlist =()=>{
                 <li>
                     Beauty
                     <ChevronDownIcon/>
-                    <ul>
+                    <ul className={Styles.dropdown}>
                         <li>Make Up</li>
                         <li>Skincare</li>
                         <li>Personal Care</li>
@@ -93,7 +93,7 @@ const Navlist =()=>{
                 <li>
                     Jewellery
                     <ChevronDownIcon/>
-                    <ul>
+                    <ul className={Styles.dropdown}>
                         <li>Fine Jwellery </li>
                         <li>Jwellery</li>
                     </ul>

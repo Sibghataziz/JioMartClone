@@ -1,9 +1,11 @@
 .navlist{
     width: 100%;
-    text-align: center;
+    text-align: left;
     position: absolute;
-    border: 1px solid black;
+    padding-left: 180px;
     background-color: #ececed;
+    font-weight: 500;
+    font-size: 14px;
     
 }
 .navlist ul{
@@ -13,8 +15,10 @@
 }
 
 .navlist>ul{
-    padding: 0%;
+    padding-left: 10px;
+    
     margin: 0;
+
     display: inline-block;
     
     color: #000;
@@ -24,8 +28,37 @@
     cursor: pointer;
     float: left;
     width: 180px;
-    height: 50px;
-    line-height: 50px;
+    height: 35px;
+    line-height: 35px;
+    
+    
+}
+.navlist>ul>li:nth-child(4){
+    padding-left: 10px;
+}
+
+.dropdown {
+    padding-top: 5px;
+}
+.dropdown li{
+    text-align: left;
+    width: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #ececed;
+    display: none; 
+
+}
+.navlist>ul>li:last-child>ul>li{
+    width:200px;
+}
+.navlist li:hover>.dropdown li {
+     display: block;
+     
+}
+.dropdown li:hover{
+    background-color: #fff;
+    color: #007bff;
 }
 
 
