@@ -47,8 +47,6 @@ export default function Filters({
   handleUrlFilter,
 }) {
   const filters = filterList[product_category];
-  const [price, setPrice] = useState(urlFilter.Price)
-  const [discount, setDiscount] = useState(urlFilter.DiscountRange)
 
   const handleChange = (e) => {
     const { name, checked } = e.target;
