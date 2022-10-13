@@ -12,6 +12,7 @@ import useAPICall from "../CustomHooks/useAPICall";
 import { getProducts, getInfiniteProducts } from "../Redux/Products/action";
 import InfiniteScroll from "react-infinite-scroll-component";
 import ProductItem from "./ProductItem";
+import { Link } from "react-router-dom";
 
 export default function ListOfProducts({
   windowWidth,
@@ -105,11 +106,12 @@ export default function ListOfProducts({
           >
             <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} width="100%">
               {products.map((product) => (
-                <ProductItem
+                <Link
+                  to={`/products/${product_category}/${product.id}`}
                   key={product.id}
-                  {...product}
-                  windowWidth={windowWidth}
-                />
+                >
+                  <ProductItem {...product} windowWidth={windowWidth} />
+                </Link>
               ))}
             </SimpleGrid>
           </InfiniteScroll>

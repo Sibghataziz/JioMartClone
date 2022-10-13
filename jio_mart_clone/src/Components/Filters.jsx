@@ -10,7 +10,7 @@ import {
   RangeSliderTrack,
   useRangeSlider,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 
 const capitalize = (word) =>
   `${word[0].toUpperCase()}${word.substring(1, word.length)}`;
@@ -47,10 +47,12 @@ export default function Filters({
   handleUrlFilter,
 }) {
   const filters = filterList[product_category];
+  const [price, setPrice] = useState(urlFilter.Price)
+  const [discount, setDiscount] = useState(urlFilter.DiscountRange)
 
   const handleChange = (e) => {
     const { name, checked } = e.target;
-    // console.log(name,checked)
+    console.log(name,checked)
     if (name === "Availability") {
       handleUrlFilter({ ...urlFilter, [name]: checked });
     } else {
