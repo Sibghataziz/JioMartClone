@@ -26,7 +26,7 @@ export default function ProductItem({
     fprice !== NaN && iprice !== NaN ? ((iprice - fprice) / iprice) * 100 : 0
   );
   // console.log(typeof item_final_price === 'string', typeof item_final_price)
-  if (windowWidth <= 770) {
+  if (windowWidth <= 768) {
     return (
       <Flex p={5} position="relative" justify="space-between" m={2}>
         <Box width="25%">
