@@ -1,16 +1,14 @@
-import { Box } from "@chakra-ui/react";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import AllProduct from "../Pages/AllProduct";
-import DummyHome from "./DummyHome";
+import Checkout from './Checkout'
 
 export default function AllRoutes() {
   return (
-    <Box>
+    <div>
       <Routes>
-        <Route path="/" element={<DummyHome />} />
-        <Route path="/products/:product_category" element={<AllProduct />} />
+        <Route path='/checkout/:id' element={<Checkout/>} />
+        {/* <Route path='/' element={<Checkout/>} /> */}
       </Routes>
-    </Box>
+    </div>
   );
 }
