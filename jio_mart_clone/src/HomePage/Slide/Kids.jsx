@@ -1,21 +1,18 @@
 import { Box, Img, Slider, Text, WrapItem } from "@chakra-ui/react";
 import { useRef } from "react";
 import { useEffect } from "react";
-import { categorydata } from "../data";
-// import styles from "./Shop.module.css";
-import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
+import { KidsFashion } from "../data";
+import styles from "./Shop.module.css";
 import Carousel from "react-elastic-carousel";
-import styles from "../HomePageCss/Section.module.css";
 
-function Categorydata() {
+function Kids() {
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 406, itemsToShow: 3, itemsToScroll: 3 },
-    { width: 800, itemsToShow: 5, itemsToScroll: 5 },
+    { width: 800, itemsToShow: 4, itemsToScroll: 4 },
     { width: 1200, itemsToShow: 5, itemsToScroll: 5 },
   ];
   const sliderRef = useRef(null);
-
   //dependency ===>
   useEffect(() => {
     console.log(sliderRef);
@@ -23,31 +20,23 @@ function Categorydata() {
 
   return (
     <div>
-      <Box>
-        <Text as={"b"} fontSize="xl" m={"3rem"}>
-          Shop by Categories
+      <Box mt={"1rem"} mb={'1rem'}>
+        <Text as={"b"} fontSize="xl" m={"3rem"} mt={'2rem'}>
+          Kids Fashion
         </Text>
       </Box>
 
-      <div className={styles.forflex}>
+      <div>
         <div
-          // className={styles.leftBtn}
           onClick={() => sliderRef.current.slickPrev()}
         ></div>
-        <Box bg="white" w="98%" ml={'1rem'}>
+        <Box bg="white" w="94%" ml={'2.4rem'}>
           <Carousel breakPoints={breakPoints}>
-            {categorydata.map((item) => (
+            {KidsFashion.map((item) => (
               <Box
-                m="5px"
-                alignItems="center"
-                textAlign={"center"}
                 key={item.item_id}
-                p={"1rem"}
-                borderRadius={"1rem"}
-                bg={"#efd6da"}
-              >
+                border={"1px solid gray"} p={'1rem'} m={1} borderRadius={"1rem"} bg={'#f9f0ab'} mt={0}>
                 <Img className={styles.items} src={item.image} />
-                <Text as={"b"}>{item.title}</Text>
               </Box>
             ))}
           </Carousel>
@@ -57,4 +46,4 @@ function Categorydata() {
     </div>
   );
 }
-export default Categorydata;
+export default Kids;

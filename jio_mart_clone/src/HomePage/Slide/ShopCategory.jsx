@@ -100,8 +100,8 @@ function ShopCategory() {
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 406, itemsToShow: 3, itemsToScroll: 3 },
-    { width: 800, itemsToShow: 6, itemsToScroll: 6 },
-    { width: 1200, itemsToShow: 5, itemsToScroll: 5 },
+    { width: 800, itemsToShow: 5, itemsToScroll: 5 },
+    { width: 1200, itemsToShow: 6, itemsToScroll: 6 },
   ];
   const sliderRef = useRef(null);
 
@@ -123,7 +123,7 @@ function ShopCategory() {
           // className={styles.leftBtn}
           onClick={() => sliderRef.current.slickPrev()}
         ></div>
-        <Box bg="white" w="100%">
+        <Box bg="white" w="96%" ml={'2rem'}>
           <Carousel breakPoints={breakPoints}>
             {shopCategory.map((item) => (
               <Box

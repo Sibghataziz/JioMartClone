@@ -11,7 +11,7 @@ function TopDealSlides() {
     { width: 1, itemsToShow: 1 },
     { width: 406, itemsToShow: 3, itemsToScroll: 3 },
     { width: 800, itemsToShow: 5, itemsToScroll: 5 },
-    { width: 1200, itemsToShow: 5, itemsToScroll: 5 },
+    { width: 1200, itemsToShow: 6, itemsToScroll: 6 },
   ];
   const sliderRef = useRef(null);
 
@@ -32,15 +32,16 @@ function TopDealSlides() {
           className={styles.btnlef}
           onClick={() => sliderRef.current.slickPrev()}
         ></div>
-        <Box bg="white" w="96%" height={"24rem"} ml={"2rem"}>
+        <Box
+          bg="white"
+          w="96%"
+          height={"24rem"}
+          ml={"2rem"}
+          // border={"1px solid blue"}
+        >
           <Carousel breakPoints={breakPoints}>
             {GrocerieSlider.map((item) => (
-              <Box
-                // border={'1px solid gray'}
-                m="6px"
-                key={item.item_id}
-                // border={"2px solid red"}
-              >
+              <Box m="6px" key={item.item_id}>
                 <div className={styles.grow}>
                   <div className={styles.blow}>
                     <div className={styles.discountdiv}>

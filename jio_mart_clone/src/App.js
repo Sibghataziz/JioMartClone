@@ -1,16 +1,12 @@
-import AllRoutes from "./Components/AllRoutes";
-import Footer from "./Components/Footer";
-import Navbar from "./Components/Navbar";
-
 import Slider from "./HomePage/Slider";
-import HomePage from "./Pages/HomePage";
-
+import Index from "./Pages/Index";
 function App() {
   return (
     <div>
-       <Navbar/>
-       <Slider/>
-     <HomePage/>
+      NAVBAR===Umar
+      <Slider />
+      <Index/>
+      FOOTER===Umar
     </div>
   );
 }

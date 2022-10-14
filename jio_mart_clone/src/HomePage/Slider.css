@@ -4,7 +4,7 @@
   position: relative;
   box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
   margin-bottom: 1rem;
-  margin-top: 8rem;
+  margin-top: 6rem;
 }
 @media screen and (max-width: 100%) {
   .container-slider {
@@ -31,7 +31,7 @@
 
 .btn-slide {
   width: 2.9rem;
-  height: 5rem;
+  height: 6rem;
   background-color: #ffffff;
   border: 1px solid rgba(34, 34, 34, 0.287);
   position: absolute;

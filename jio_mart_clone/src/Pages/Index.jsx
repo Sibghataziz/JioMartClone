@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, Img, Link, Text } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, Heading, Img, Link, Text } from "@chakra-ui/react";
 import EssentialOffers from "../HomePage/Offers/EssentialOffers";
 import RecomendedSlide from "../HomePage/Slide/RecomendedSlide";
 import ShopCategory from "../HomePage/Slide/ShopCategory";
@@ -10,8 +10,13 @@ import {
   BigWomenData,
   KidsFashion,
   downData,
+  BigMenData,
+  posterimg,
+  Personal,
+  mensdata,
 } from "../HomePage/data";
 import Categorydata from "../HomePage/Slide/Category";
+import Kids from "../HomePage/Slide/Kids";
 
 function Index() {
   return (
@@ -60,8 +65,8 @@ function Index() {
         </Box>
 
         {/* ShopCategory ======>*/}
+        {/* if u need Rap it inside the Link */}
         <ShopCategory />
-
         <Link to="./">
           <Box m={2} mt={"1.3rem"}>
             <img
@@ -83,29 +88,33 @@ function Index() {
             ></Img>
           </Box>
         </div>
+ 
+       {/* h3,handle it==>manualy  */}
+
+       <Categorydata />
 
         <Link to="/">
           <div className={styles.groceries}>
             <h3 class={styles.text}>Offers on daily essentials</h3>
             <div className={styles.groceriesD}>
               {groceries.map((grow) => (
-                <div className="deal">
+                <Box className="deal">
                   <div className={styles.Choco}>
                     <img
                       className={styles.groom}
                       style={{ border: "1rem" }}
                       src={grow.image}
-                      alt={grow.n}
+                      alt=""
                     />
                   </div>
-                </div>
+                </Box>
               ))}
             </div>
           </div>
         </Link>
-
+     
         <div>
-          <Categorydata />
+         
         </div>
 
         <Link to="/">
@@ -118,13 +127,15 @@ function Index() {
                     className={styles.moon}
                     style={{ borderRadius: "0.5rem" }}
                     src={wom.image}
-                    alt={wom.n}
+                    alt="wom"
                   />
                 </div>
               ))}
             </div>
           </div>
         </Link>
+       
+        {/* small owmens====>  */}
 
         <Link to="/">
           <div className={styles.menssmall}>
@@ -135,42 +146,85 @@ function Index() {
                     className={styles.dhoom}
                     style={{ borderRadius: "0.5rem" }}
                     src={women.image}
-                    alt={women.n}
+                    alt="womenn"
                   />
                 </div>
               ))}
             </div>
           </div>
         </Link>
+ 
+        <Link to='/fashion'>
+       <div className={styles.menimg}>
+        <h3 class={styles.text}>Mens Fashion</h3>
+       <div className={styles.menf}>
+            {BigMenData.map((post)=> (
+              <div className='post'>
+                  <img className={styles.moon} style={{borderRadius:"0.5rem"}}
+                  src={post.image} alt={post.n} />
+                </div>
+            ))}
+       </div>
+      </div>
+    </Link>
 
-        <Link to="/fashion">
-          <div className={styles.kidssmall}>
-            <h3 class={styles.text}>Kid's Fashion</h3>
-            <Box display={{ base: "1", sm: "2", lg: "4", xl: "4" }}>
-              <div className={styles.kidsfashion}>
-                {KidsFashion.map((kids) => (
-                  <div className={styles.kids}>
-                    <img
-                      className={styles.boom}
-                      style={{ borderRadius: "0.5rem" }}
-                      src={kids.image}
-                      alt={kids.n}
-                    />
+    <Link to="/fashion">
+    <div className={styles.menssmall}>
+     <div className={styles.mensfashion}>
+            {mensdata.map((pro)=> (
+              <div className={styles.fashion}>
+                  <img className={styles.dhoom} style={{borderRadius:"0.5rem"}}
+                  src={pro.img} alt={pro.n} />
+                </div>
+            ))}
+       </div>
+     </div>
+     </Link>
+
+     <div>
+      <Box ml={'0.8rem'}>
+        <img width={"99%"} src="https://www.jiomart.com/images/category/563/girls-20200831.jpg" alt="" />
+      </Box>
+    </div>
+
+     <Kids/>
+
+    <Link to="groceries">
+    <div className={styles.groceries}>
+       <h3 class={styles.text}>Offers on Household and Personal Care</h3>
+       <div className={styles.groceriesD}>
+            {Personal.map((grow)=> (
+              <div className='deal'>
+                <div className={styles.Creamy}>
+                  <img className={styles.groom} style={{border:"1rem"}}
+                  src={grow.image} alt={grow.n}/>
                   </div>
-                ))}
-              </div>
-            </Box>
-          </div>
-        </Link>
+                </div>
+            ))}
+       </div>
+     </div>
+     </Link>
 
-        <div className={styles.posterimg3}>
+     <div className={styles.posterimg}>
+       <div className={styles.abovefooter}>
+            {
+            posterimg.map((poster)=> (
+              <div className={styles.poster}>
+                  <img 
+                  src={poster.img} alt={poster.n} />
+                </div>
+            ))}
+       </div>
+    </div>
+
+        <div className={styles.downimg}>
           <div className={styles.abovefooter}>
             {downData.map((downdata) => (
               <div className={styles.poster}>
                 <img
                   className={styles.mmm}
                   src={downdata.image}
-                  alt={downdata.n}
+                  alt="downdata_n"
                 />
               </div>
             ))}
