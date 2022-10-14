@@ -1,0 +1,88 @@
+.main {
+  border: 2px solid red;
+  height: 14rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.forflex {
+  display: flex;
+}
+
+.flex {
+  border: 2px solid yellow;
+  display: flex;
+}
+
+.leftBtn {
+  border: 1px solid green;
+  height: 3rem;
+  width: 2rem;
+  margin-top: 4rem;
+}
+.rightBtn {
+  border: 1px solid green;
+  height: 3rem;
+  width: 2rem;
+  margin-top: 4rem;
+}
+.contain {
+  border: 1px solid green;
+  margin: auto;
+  width: 94%;
+}
+.shop {
+  display: flex;
+}
+
+.items {
+  height: 14rem;
+  width: 11rem;
+}
+.items:hover {
+  overflow: hidden;
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1.1);
+}
+
+.alovera {
+  width: 38.5rem;
+  margin: auto;
+  animation-duration: 3s;
+  animation: example 20s linear infinite;
+
+  background-image: url("https://www.jiomart.com/images/cms/aw_rbslider/slides/1659964260_Cred-pay-Package_910x278.jpg");
+}
+
+@keyframes example {
+  0% {
+    background-image: url(https://www.jiomart.com/images/cms/aw_rbslider/slides/1659964260_Cred-pay-Package_910x278.jpg);
+  }
+  25% {
+    background-image: url(https://www.jiomart.com/images/cms/aw_rbslider/slides/1660291721_Twid-Banners-August_910x278.jpg);
+  }
+  50% {
+    background-image: url(https://www.jiomart.com/images/cms/aw_rbslider/slides/1660291926_jiomart-svg_910x278_1.jpg);
+  }
+  100% {
+    background-image: url(https://www.jiomart.com/images/cms/aw_rbslider/slides/1659290269_910-X-278.jpg);
+  }
+}
+
+.shopc {
+  border: 1px solid red;
+  margin-bottom: 2rem;
+}
+
+.dark {
+  border: 1px solid rgb(219, 217, 217);
+  border-radius: 4px;
+  height: 10rem;
+  width: 12rem;
+}
+.air {
+  color: rgb(17, 16, 16);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}

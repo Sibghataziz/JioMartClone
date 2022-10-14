@@ -1,4 +1,4 @@
-import { GrocerieSlider } from "../data";
+import { dataSeller } from "../data";
 import styles from "./Slide.module.css";
 import { Box, Img, Text, WrapItem } from "@chakra-ui/react";
 import { useRef } from "react";
@@ -6,12 +6,12 @@ import { useEffect } from "react";
 
 import Carousel from "react-elastic-carousel";
 
-function TopDealSlides() {
+function RecomendedSlide() {
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 406, itemsToShow: 3, itemsToScroll: 3 },
     { width: 800, itemsToShow: 5, itemsToScroll: 5 },
-    { width: 1200, itemsToShow: 5, itemsToScroll: 5 },
+    { width: 1200, itemsToShow: 6, itemsToScroll: 6 },
   ];
   const sliderRef = useRef(null);
 
@@ -23,7 +23,7 @@ function TopDealSlides() {
     <div>
       <Box mt={"1rem"}>
         <Text as={"b"} fontSize="xl" m={"3rem"}>
-          Top Deals
+          Rcommended
         </Text>
       </Box>
 
@@ -32,14 +32,13 @@ function TopDealSlides() {
           className={styles.btnlef}
           onClick={() => sliderRef.current.slickPrev()}
         ></div>
-        <Box bg="white" w="96%" height={"24rem"} ml={"2rem"}>
+        <Box bg="white" w="94%" ml={"3rem"} height={"24rem"}>
           <Carousel breakPoints={breakPoints}>
-            {GrocerieSlider.map((item) => (
+            {dataSeller.map((item) => (
               <Box
-                // border={'1px solid gray'}
-                m="6px"
+                m="5px"
                 key={item.item_id}
-                // border={"2px solid red"}
+                // border="2px solid red"
               >
                 <div className={styles.grow}>
                   <div className={styles.blow}>
@@ -48,13 +47,13 @@ function TopDealSlides() {
                       <img
                         className={styles.discountimg}
                         src="https://i.ibb.co/Yd3ZVDg/badge.png"
-                        alt="budget"
+                        alt=""
                       />
                     </div>
                     <img
                       className={styles.imgSrc}
-                      src={item.imgSrc}
-                      alt="product_Deals"
+                      src={item.imgSr}
+                      alt="product"
                     />
                     <p className={styles.heading}>
                       {item.heading} <></>
@@ -84,4 +83,4 @@ function TopDealSlides() {
     </div>
   );
 }
-export default TopDealSlides;
+export default RecomendedSlide;
