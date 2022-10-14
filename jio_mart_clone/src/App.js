@@ -1,15 +1,14 @@
-import AllRoutes from "./Components/AllRoutes";
-import Footer from "./Components/Footer";
-import Navbar from "./Components/Navbar";
+import React from 'react';
+import AllRoutes from './Components/AllRoutes';
 
 function App() {
+
   return (
-    <div>
-      <Navbar/>
-      <AllRoutes/>
-      <Footer/>
+    <div className='App'>
+      <main>
+        <AllRoutes />
+      </main>
     </div>
   );
 }
-
 export default App;
