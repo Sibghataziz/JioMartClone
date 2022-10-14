@@ -15,13 +15,12 @@ export default function ProductBanner({ product_category }) {
   const banner = BannerLink[product_category];
 
   return (
-    <Box bg={"teal.100"} width="98%" height={200} borderRadius={10}>
+    <Box bg={"teal.100"} width="98%" height={250}>
       <Image
         src={banner}
         boxSize="100%"
         alt="Electronics"
         objectFit="cover"
-        borderRadius={10}
       />
     </Box>
   );

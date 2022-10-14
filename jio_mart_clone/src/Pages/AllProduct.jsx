@@ -51,6 +51,7 @@ export default function AllProduct() {
               product_category={product_category}
               handleUrlFilter={handleUrlFilter}
               urlFilter={urlFilter}
+              urlFilterInit ={urlFilterInit}
             />
           </Box>
         ) : null}

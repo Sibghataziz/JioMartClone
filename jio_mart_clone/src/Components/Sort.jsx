@@ -19,7 +19,7 @@ const falsyState = {
 };
 
 export default function Sort({ handleUrlFilter, urlFilter }) {
-  const { total, products } = useSelector((state) => state);
+  const { total, products } = useSelector((state) => state.products);
   const [hover, setHover] = useState(intiState);
   const [active, setActive] = useState(intiState);
 
@@ -31,8 +31,8 @@ export default function Sort({ handleUrlFilter, urlFilter }) {
   const buttonStyle = {
     backgroundColor: "white",
     color: "black",
-    borderRadius: "10px",
-    width: "120px",
+    borderRadius: "5px",
+    width: "100px",
     height: "25px",
     fontSize: "12px",
   };
@@ -41,8 +41,8 @@ export default function Sort({ handleUrlFilter, urlFilter }) {
     backgroundColor: "white",
     color: "#2EA3D6",
     border: "1px solid #2EA3D6",
-    borderRadius: "10px",
-    width: "120px",
+    borderRadius: "5px",
+    width: "100px",
     height: "25px",
     fontSize: "12px",
   };
@@ -69,13 +69,13 @@ export default function Sort({ handleUrlFilter, urlFilter }) {
 
   return (
     <Flex justify="space-between" mt={5} mb={5}>
-      <Box width="30%">
+      <Box >
         <p>
           Showing <span style={spanStyle}>{products.length}</span> of{" "}
           <span style={spanStyle}>{total}</span> items
         </p>
       </Box>
-      <Box width="62%" mr={5}>
+      <Box  mr={5}>
         <Box>
           Sort by:{" "}
           <ButtonGroup spacing={2}>

@@ -20,7 +20,7 @@ export default function ListOfProducts({
   urlFilter,
 }) {
   const dispatch = useDispatch();
-  const { total, loading, error, products } = useSelector((state) => state);
+  const { total, loading, error, products } = useSelector((state) => state.products);
   const { baseUrl } = useAPICall();
   const [page, setPage] = useState(1);
 

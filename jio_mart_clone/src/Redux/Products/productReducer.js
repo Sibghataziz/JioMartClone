@@ -12,11 +12,12 @@ const initState = {
   products: [],
 };
 
-function reducer(state = initState, action) {
+function productReducer(state = initState, action) {
   switch (action.type) {
     case GET_PRODUCTS_SUCCESS: {
       // console.log(action.payload)
       return {
+        ...state,
         loading: false,
         error: false,
         products: action.payload[1],
@@ -25,6 +26,7 @@ function reducer(state = initState, action) {
     }
     case GET_PRODUCTS_LOADING: {
       return {
+        ...state,
         total: 0,
         loading: true,
         error: false,
@@ -33,6 +35,7 @@ function reducer(state = initState, action) {
     }
     case GET_PRODUCTS_ERROR: {
       return {
+        ...state,
         total: 0,
         loading: false,
         error: true,
@@ -42,6 +45,7 @@ function reducer(state = initState, action) {
 
     case GET_PRODUCTS_INIFINITE: {
       return {
+        ...state,
         total : state.total,
         loading : state.loading,
         error : state.error,
@@ -54,4 +58,4 @@ function reducer(state = initState, action) {
   }
 }
 
-export default reducer;
+export default productReducer;
