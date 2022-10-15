@@ -1,15 +1,17 @@
-import { Flex, Box, useDisclosure, Img } from '@chakra-ui/react';
+import { Flex, Box, useDisclosure, } from '@chakra-ui/react';
 import { IconButton } from '@chakra-ui/react';
 import {HamburgerIcon} from '@chakra-ui/icons';
 import { Input , Image } from '@chakra-ui/react';
 import { useRef } from 'react';
 import LeftDrawer from './LeftDrawer';
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import { useState } from 'react';
+import Styles from "./Styles.module.css"
 
 
 
 const Navbar=()=>{
+    const Navigate=useNavigate();
     const { isOpen, onClose,onOpen } = useDisclosure()
     const btnRef=useRef();
     const [search,setSearch]=useState("")
@@ -22,12 +24,12 @@ const Navbar=()=>{
     const handleEnter=(e)=>{
         console.log(search)
         if(e.key==="Enter"){
-            if(search==="Lipcare"||search=== "Cosmetics"||search=== "accessories"||search=== "Skincare")
-            {<Link to={`/products/makeup`}></Link>} 
-            else if(search==="container"||search=== "basket"||search=== "storage"||search=== "Blender")
-            {<Link to={`/products/kitchenware`}></Link>} 
-            else if(search==="Mobile and Tablet"||search=== "TV"||search=== "Home Appliances"||search=== "Computers")
-            {<Link to={`/products/Electronics`}></Link>}  
+            if(search==="lipcare"||search=== "cosmetics"||search=== "accessories"||search=== "skincare")
+            {Navigate(`/products/makeup`)} 
+            else if(search==="container"||search=== "basket"||search=== "storage"||search=== "blender")
+            {Navigate(`/products/kitchenware`)} 
+            else if(search==="Mobile and Tablet"||search==='mobile'||search=== "tv"||search=== "Home Appliances"||search=== "Computers")
+            {Navigate(`/products/Electronics`)}  
             else {<Link to={`/*`}></Link>}
 
         }
@@ -39,12 +41,13 @@ const Navbar=()=>{
 
     return(
         <>
-        <Flex bg='#008ecc'  p="6px" align="center" justify="space-evenly"  >
+        <div className={Styles.navbar}>
+        <Flex bg='#008ecc'  p="6px"  align="center" justify="space-evenly"  >
             <IconButton colorScheme='#008ecc' size='xxl' icon={<HamburgerIcon  color='#fff' bg='#008ecc' w={8} h={8} />}  onClick={onOpen} ref={btnRef}/>
-           <Box w={[80]}> <Image   src="https://www.jiomart.com/assets/version1664452279/smartweb/images/jiomart_logo_beta.svg" alt="Jio Icon" /></Box>
-            <Input  value={search} onChange={handleChange} onKeyDown={handleEnter} placeholder='Search essentials, groceries, and more...'  bg='#fff' w="700px"/>
-            <Box display={"flex"}>
-            <Box display={"flex"} color="white">
+           <Box> <Image   src="https://www.jiomart.com/assets/version1664452279/smartweb/images/jiomart_logo_beta.svg" alt="Jio Icon" /></Box>
+            <Input size={'md'} value={search} onChange={handleChange} onKeyDown={handleEnter} placeholder='Search essentials, groceries, and more...'  bg='#fff' w="700px"/>
+            <Box display={"flex"} justifyContent="space-between">
+            <Box display={"flex"} pr="20px" color="white" >
                 <img src="https://www.jiomart.com/msassets/images/icons/loginicon_be.svg" height="10px" width="24px" alt="" />
                 Sign in
             </Box>
@@ -56,6 +59,7 @@ const Navbar=()=>{
         </Flex>
         
         <LeftDrawer isOpen={isOpen} onClose={onClose} btnRef={btnRef} />
+        </div>
         </>
     )
 }

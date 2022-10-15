@@ -1,7 +1,17 @@
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    padding-right: 150px;
+    background-color: #008ecc;
+}
 .navlist{
     width: 100%;
     text-align: left;
-    position: absolute;
+    position:fixed;
+    top: 55px;
+    z-index: 2;
     padding-left: 180px;
     background-color: #ececed;
     font-weight: 500;
@@ -61,7 +71,7 @@
     color: #007bff;
 }
 .footer{
-    position: fixed;
+    position: relative;
     bottom: 0;
    
     width: 100%;
@@ -105,4 +115,64 @@
 }
 .footer img {
     cursor: pointer;
+}
+.DrawerHeader{
+    background-color: #008ecc;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.DrawerHeader>div>div{
+    display: flex;
+    font-size: 17px;
+    text-align: center;
+}
+.DrawerHeader button{
+    margin-top: 15px;
+    border: 1px solid white;
+    text-align: center;
+    width: 180px;
+    height: 35px;
+    margin-right: 20px;
+}
+
+.DrawerHeader>div>div:first-child>img{
+ margin-right: 15px;
+ border: 2px solid white;
+ border-radius: 25px;
+}
+.Drawerlist{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+    padding-top: 15px;
+    letter-spacing: 1px;
+    border-bottom: 5px solid #d5dbdb;
+}
+.Drawerlist li{
+    color: #000;
+    margin-top: 15px;
+    list-style: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    
+}
+.Drawerlist h3{
+    font-weight: bold;
+}
+.Drawerlist span{
+    text-decoration: underline;
+    color: #008ecc;
+    cursor: pointer;
+}
+.Drawerlist p {
+    font-weight: 300;
+    line-height: normal;
+}
+.DrawerFooter{
+    height: 50px;
+    background-color: #d5dbdb;
+}
+.Drawer{
+    width: 500px;
 }

@@ -7,12 +7,19 @@ import {
     DrawerContent,
     DrawerCloseButton,
   } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
   import  Styles  from "./Styles.module.css";  
 
 const LeftDrawer = (props) => {
-
-
     const { isOpen, onClose, btnRef } = props;
+    const Navigate= useNavigate();
+
+    const openAccount = () =>{
+      Navigate(``)
+    }
+    const openOrder = () =>{
+      
+    }
 
     return  (
         <>
@@ -22,6 +29,7 @@ const LeftDrawer = (props) => {
             placement='left'
             onClose={onClose}
             finalFocusRef={btnRef}
+            size={'sm'}
           >
             <DrawerOverlay />
             <DrawerContent >
@@ -33,8 +41,8 @@ const LeftDrawer = (props) => {
                     <h4>Hello,Sign in</h4>
                   </div>
                   <div>
-                    <button>Account</button>
-                    <button>Orders</button>
+                    <button onClick={openAccount}>Account</button>
+                    <button onClick={openOrder}>Orders</button>
                   </div>
                 </div>
               </DrawerHeader>
@@ -70,7 +78,7 @@ const LeftDrawer = (props) => {
                </div>
               </DrawerBody>
     
-              <DrawerFooter>
+              <DrawerFooter className={Styles.DrawerFooter}>
               </DrawerFooter>
             </DrawerContent>
           </Drawer>
