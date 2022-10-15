@@ -20,7 +20,9 @@ export default function ListOfProducts({
   urlFilter,
 }) {
   const dispatch = useDispatch();
-  const { total, loading, error, products } = useSelector((state) => state.products);
+  const { total, loading, error, products } = useSelector(
+    (state) => state.products
+  );
   const { baseUrl } = useAPICall();
   const [page, setPage] = useState(1);
 
@@ -89,7 +91,7 @@ export default function ListOfProducts({
       {loading ? (
         <h1>Loading......</h1>
       ) : error ? (
-        <h1>error......</h1>
+        <h1>Something went wrong please..... Please refresh </h1>
       ) : (
         <Box>
           <InfiniteScroll
@@ -106,12 +108,13 @@ export default function ListOfProducts({
           >
             <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} width="100%">
               {products.map((product) => (
-                <Link
-                  to={`/products/${product_category}/${product.id}`}
+                <ProductItem
                   key={product.id}
-                >
-                  <ProductItem {...product} windowWidth={windowWidth} />
-                </Link>
+                  {...product}
+                  product={product}
+                  windowWidth={windowWidth}
+                  product_category={product_category}
+                />
               ))}
             </SimpleGrid>
           </InfiniteScroll>

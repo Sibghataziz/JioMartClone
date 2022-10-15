@@ -36,6 +36,7 @@ import {
 import thunk from "redux-thunk";
 import { AuthReducer } from "./Login/loginReducer";
 import { singleProductReducer } from "./SingleProduct/singleReducer";
+import { cartReducer } from "./Cart/cartReducer";
 import productReducer from "./Products/productReducer";
 
 const functionOrObject = (store) => (next) => (action) => {
@@ -48,7 +49,7 @@ const functionOrObject = (store) => (next) => (action) => {
 
   export const rootReducer = combineReducers({
     // auth: AuthReducer,
-    // cart: cartReducer,
+    cart: cartReducer,
     singleProduct: singleProductReducer,
     products: productReducer,
   });
