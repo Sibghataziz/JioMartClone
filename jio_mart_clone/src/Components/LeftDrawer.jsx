@@ -18,7 +18,7 @@ const LeftDrawer = (props) => {
       Navigate(``)
     }
     const openOrder = () =>{
-      
+
     }
 
     return  (
@@ -29,7 +29,7 @@ const LeftDrawer = (props) => {
             placement='left'
             onClose={onClose}
             finalFocusRef={btnRef}
-            size={'sm'}
+            size={'xs'}
           >
             <DrawerOverlay />
             <DrawerContent >

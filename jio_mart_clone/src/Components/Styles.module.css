@@ -4,18 +4,26 @@
     width: 100%;
     z-index: 2;
     padding-right: 150px;
+    padding-left: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     background-color: #008ecc;
+    font-size: 15px;
+}
+.image{
+    padding-top: 5px;
+    width: 100px;
 }
 .navlist{
     width: 100%;
     text-align: left;
     position:fixed;
-    top: 55px;
+    top: 62px;
     z-index: 2;
-    padding-left: 180px;
+    padding-left: 150px;
     background-color: #ececed;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 13px;
     
 }
 .navlist ul{
@@ -47,9 +55,7 @@
     padding-left: 10px;
 }
 
-.dropdown {
-    padding-top: 5px;
-}
+
 .dropdown li{
     text-align: left;
     width: 300px;
@@ -62,10 +68,11 @@
 .navlist>ul>li:last-child>ul>li{
     width:200px;
 }
-.navlist li:hover>.dropdown li {
+.navlist li:hover .dropdown li {
      display: block;
      
 }
+
 .dropdown li:hover{
     background-color: #fff;
     color: #007bff;
@@ -123,7 +130,7 @@
 }
 .DrawerHeader>div>div{
     display: flex;
-    font-size: 17px;
+    font-size: 16px;
     text-align: center;
 }
 .DrawerHeader button{
@@ -150,10 +157,10 @@
 }
 .Drawerlist li{
     color: #000;
-    margin-top: 15px;
+    margin-bottom: 15px;
     list-style: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 400;
     
 }
@@ -173,6 +180,4 @@
     height: 50px;
     background-color: #d5dbdb;
 }
-.Drawer{
-    width: 500px;
-}
+
