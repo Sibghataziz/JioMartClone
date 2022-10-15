@@ -154,7 +154,7 @@ export const KidsFashion = [
   },
 ];
 
-export const HottestDeals = [
+export const WowDeal = [
   {
     image:
       "https://www.jiomart.com/images/cms/section/category/501/509.png?v=1628791106",

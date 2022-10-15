@@ -33,12 +33,9 @@
   width: 96%;
   gap: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem,16rem));
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 16rem));
   justify-content: center;
 }
-
-
-
 
 .Choco {
   /* border:1px solid red; */
@@ -69,13 +66,16 @@
 }
 .hotestD {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin-left: 2rem;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, 13rem);
+  justify-content: center;
+  margin-left: 0.3rem;
+  margin: 5px;
 }
 .zoom:hover {
   overflow: hidden;
-  -ms-transform: scale(1); /* IE 9 */
-  -webkit-transform: scale(1); /* Safari 3-8 */
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
   transform: scale(1.1);
 }
 
@@ -105,17 +105,22 @@
   height: 30rem;
   width: 100%;
   margin: auto;
-  margin-bottom: 2rem;
+  /* border: 1px solid tomato; */
+  /* margin-bottom: 2rem; */
 }
 /* .post{
  /* border:1px solid red; */
 
 .menf {
+  position: relative;
+  position: sticky;
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(auto, 36rem));
   justify-content: center;
   grid-gap: 2rem;
   margin: auto;
+
   /* margin-left: 2rem; */
 }
 /* .moon:hover{
@@ -141,7 +146,7 @@ transform: scale(1.1);
 
 .mensfashion {
   display: grid;
-  grid-template-columns: repeat(auto-fit,15rem);
+  grid-template-columns: repeat(auto-fit, 15rem);
   justify-content: center;
   /* margin: auto; */
   margin-left: 1rem;
@@ -152,8 +157,8 @@ transform: scale(1.1);
 }
 .dhoom:hover {
   overflow: hidden;
-  -ms-transform: scale(1); /* IE 9 */
-  -webkit-transform: scale(1); /* Safari 3-8 */
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
   transform: scale(1.1);
 }
 
@@ -178,7 +183,6 @@ transform: scale(1.1);
   height: 150rem;
   width: 100%;
   margin-top: -8rem;
-  
 }
 /* display: grid;
   grid-template-columns: repeat(auto-fit, minmax(auto, 36rem));
@@ -188,7 +192,7 @@ transform: scale(1.1);
 
 .abovefooter {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(auto, 37rem));
+  grid-template-columns: repeat(auto-fit, minmax(auto, 37rem));
   justify-content: center;
   margin-left: 1rem;
 }
