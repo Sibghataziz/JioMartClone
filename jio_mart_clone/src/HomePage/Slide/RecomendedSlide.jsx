@@ -32,13 +32,13 @@ function RecomendedSlide() {
           className={styles.btnlef}
           onClick={() => sliderRef.current.slickPrev()}
         ></div>
-        <Box bg="white" w="94%" ml={"3rem"} height={"24rem"}>
+        <Box bg="white" w="98%" ml={"1rem"} height={"24rem"}>
           <Carousel breakPoints={breakPoints}>
             {dataSeller.map((item) => (
               <Box
                 m="5px"
                 key={item.item_id}
-                // border="2px solid red"
+               
               >
                 <div className={styles.grow}>
                   <div className={styles.blow}>

@@ -34,17 +34,17 @@ function TopDealSlides() {
         ></div>
         <Box
           bg="white"
-          w="96%"
+          w="98%"
           height={"24rem"}
-          ml={"2rem"}
-          // border={"1px solid blue"}
+          ml={"1rem"}
+        
         >
           <Carousel breakPoints={breakPoints}>
             {GrocerieSlider.map((item) => (
               <Box m="6px" key={item.item_id}>
                 <div className={styles.grow}>
                   <div className={styles.blow}>
-                    <div className={styles.discountdiv}>
+                    <div  className={styles.discountdiv}>
                       <p className={styles.discount}>33 % Off</p>
                       <img
                         className={styles.discountimg}
@@ -67,7 +67,7 @@ function TopDealSlides() {
 
                     <button className={styles.addtocart}>
                       Add to Cart{" "}
-                      <img
+                      <Img
                         className={styles.add}
                         src="https://i.ibb.co/QHDtjF4/plus.png"
                         alt="btnAdd"

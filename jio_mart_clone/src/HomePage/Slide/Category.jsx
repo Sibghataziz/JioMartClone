@@ -23,7 +23,7 @@ function Categorydata() {
 
   return (
     <div>
-      <Box>
+      <Box mt={'1rem'} mb={"1rem"}>
         <Text as={"b"} fontSize="xl" m={"3rem"}>
           Shop by Categories
         </Text>

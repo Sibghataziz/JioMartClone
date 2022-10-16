@@ -32,42 +32,42 @@ function Index() {
   return (
     <div>
       <Box>
-        <Box mt="2">
+        <Box >
           <img
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1665654011_SBI_Unit.jpg"
             alt="bast_Sale"
           />
         </Box>
 
-        <Box mt={2}>
+        <Box >
           <img
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1654714506_Free-Home-Delivery--strip-1240-X-162.jpg"
             alt="lowerBaner "
           />
         </Box>
 
-        <Flex mt={"2"}>
+        <Flex >
           <img
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1665425391_Camp-A-Desktop.jpg"
             alt=""
           />
         </Flex>
 
-        <Box m={2} mt={"1.3rem"}>
+        <Box m={2} mt={"1rem"}>
           <img
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1662531217_Wednesday_Bonus.jpg"
             alt="lowerBaner "
           />
         </Box>
 
-        <Box m={2} mt={"1.3rem"}>
+        <Box m={2} mt={"1.2rem"}>
           <img
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1664448687_Image_3.jpg"
             alt=""
           />
         </Box>
 
-        <Box m={2} mt={"1.3rem"}>
+        <Box m={2} mt={"0.6rem"}>
           <img
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1665072906_Oct-6_Slim-Banner_web.jpg"
             alt=""
@@ -166,7 +166,7 @@ function Index() {
           <h3 class={styles.text}>Mens Fashion</h3>
           <div className={styles.menf}>
             {BigMenData.map((post) => (
-              <div className="post">
+              <div >
                 <img
                   className={styles.moon}
                   style={{ borderRadius: "0.5rem" }}
@@ -194,7 +194,7 @@ function Index() {
         </div>
 
         <div>
-          <Box ml={"0.8rem"}>
+          <Box ml={"0.8rem"} mt={'2rem'}>
             <img
               width={"99%"}
               src="https://www.jiomart.com/images/category/563/girls-20200831.jpg"
@@ -223,6 +223,7 @@ function Index() {
         </div>
 
         <Link to="groceries">
+
           <div className={styles.groceries}>
             <h3 class={styles.text}>Offers on Household and Personal Care</h3>
             <div className={styles.groceriesD}>

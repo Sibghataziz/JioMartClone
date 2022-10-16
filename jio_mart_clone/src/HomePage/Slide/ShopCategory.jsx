@@ -88,7 +88,7 @@
 //  export default ShopCategory;
 //=======================>
 
-import { Box, Img, Slider, Text, WrapItem } from "@chakra-ui/react";
+import { Box, Img, Link, Slider, Text, WrapItem } from "@chakra-ui/react";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { shopCategory } from "../data";
@@ -100,7 +100,7 @@ function ShopCategory() {
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 406, itemsToShow: 3, itemsToScroll: 3 },
-    { width: 800, itemsToShow: 5, itemsToScroll: 5 },
+    { width: 800, itemsToShow: 5.5, itemsToScroll: 5.5 },
     { width: 1200, itemsToShow: 6, itemsToScroll: 6 },
   ];
   const sliderRef = useRef(null);
@@ -111,19 +111,20 @@ function ShopCategory() {
   }, []);
 
   return (
+
     <div>
+     <Link to="/">
       <Box>
         <Text as={"b"} fontSize="xl" m={"3rem"}>
           Shop from Top Categories
         </Text>
       </Box>
-
+      </Link>
       <div className={styles.forflex}>
         <div
-          // className={styles.leftBtn}
           onClick={() => sliderRef.current.slickPrev()}
         ></div>
-        <Box bg="white" w="96%" ml={'2rem'}>
+        <Box bg="white" w="98%" ml={'1rem'}>
           <Carousel breakPoints={breakPoints}>
             {shopCategory.map((item) => (
               <Box

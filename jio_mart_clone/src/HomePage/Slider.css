@@ -3,8 +3,10 @@
   height: 21rem;
   position: relative;
   box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
-  margin-bottom: 1rem;
-  margin-top: 6rem;
+  /* margin-bottom: 0.6rem; */
+  /* margin-top: 6rem; */
+ margin: auto;
+
 }
 @media screen and (max-width: 100%) {
   .container-slider {
@@ -74,109 +76,3 @@
   background: rgb(32, 32, 32);
 }
 
-/* 
-  -----------------Below Slider---------- */
-
-.belowSlider {
-  width: 84.2rem;
-  height: 40rem;
-  border: 1px solid black;
-}
-.img-s {
-  width: 84.5rem;
-}
-
-.vicks {
-  border: 1px solid red;
-  height: 10rem;
-  width: 84.2rem;
-  margin-top: 1rem;
-  margin-bottom: 4rem;
-}
-
-.img-vick {
-  width: 84.5rem;
-  height: 10rem;
-}
-
-.hotest {
-  height: 40rem;
-  width: 100%;
-}
-.hotest-deal {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin-left: 2rem;
-}
-
-.kids-small {
-  height: 20rem;
-  width: 100%;
-  margin: auto;
-  margin-bottom: 5rem;
-}
-.kids-fashion {
-  display: flex;
-  margin: auto;
-  margin-left: 2rem;
-  border-radius: 0.5rem;
-}
-.kids {
-  width: 30rem;
-}
-
-.men-img {
-  height: 30rem;
-  width: 100%;
-  margin: auto;
-}
-
-.men-f {
-  display: grid;
-  grid-template-columns: 46% 46%;
-  grid-gap: 2rem;
-  margin: auto;
-  margin-left: 3rem;
-}
-
-.text {
-  color: black;
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-left: 3rem;
-  margin-bottom: 0.5rem;
-}
-
-.mens-small {
-  height: 20rem;
-  width: 100%;
-  margin: auto;
-  margin-bottom: 5rem;
-}
-.mens-fashion {
-  display: flex;
-  margin: auto;
-  margin-left: 2rem;
-  border-radius: 0.5rem;
-}
-.fashion {
-  width: 30rem;
-}
-.mmm {
-  width: 100%;
-}
-
-.poster-img {
-  height: 72rem;
-  width: 100%;
-  margin: auto;
-}
-
-.above-footer {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  margin-left: 1rem;
-}
-.poster {
-  margin: 1rem;
-}

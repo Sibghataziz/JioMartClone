@@ -241,7 +241,7 @@ export const GrocerieSlider = [
     price: "₹ 875.00",
     mrp: "M.R.P:",
     rupees: "₹ 1313",
-    save: "₹ 435.00",
+    save: "Save ₹ 435.00",
   },
   {
     imgSrc:
@@ -250,7 +250,7 @@ export const GrocerieSlider = [
     price: "₹ 188.00",
     mrp: "M.R.P:",
     rupees: "₹ 253",
-    save: "₹ 65.00",
+    save: "Save ₹ 65.00",
   },
   {
     imgSrc:
@@ -259,7 +259,7 @@ export const GrocerieSlider = [
     price: "₹ 678.00",
     mrp: "M.R.P:",
     rupees: "₹ 730",
-    save: "₹ 52.00",
+    save: "Save ₹ 52.00",
   },
   {
     imgSrc:
@@ -268,7 +268,7 @@ export const GrocerieSlider = [
     price: "₹ 92.00",
     mrp: "M.R.P:",
     rupees: "₹ 102",
-    save: "₹ 17.00",
+    save: "Save ₹ 17.00",
   },
   {
     imgSrc:
@@ -277,7 +277,7 @@ export const GrocerieSlider = [
     price: "₹ 245.00",
     mrp: "M.R.P:",
     rupees: "₹ 255",
-    save: "₹ 10.00",
+    save: "Save ₹ 10.00",
   },
   {
     imgSrc:
@@ -286,7 +286,7 @@ export const GrocerieSlider = [
     price: "₹ 252.00",
     mrp: "M.R.P:",
     rupees: "₹ 300",
-    save: "₹ 48.00",
+    save: "Save ₹ 48.00",
   },
   {
     imgSrc:
@@ -295,7 +295,7 @@ export const GrocerieSlider = [
     price: "₹ 163.00",
     mrp: "M.R.P:",
     rupees: "₹ 182",
-    save: "₹ 19.00",
+    save: "Save ₹ 19.00",
   },
   {
     imgSrc:
@@ -304,7 +304,7 @@ export const GrocerieSlider = [
     price: "₹ 1325.00",
     mrp: "M.R.P:",
     rupees: "₹ 1425",
-    save: "₹ 100.00",
+    save: "Save ₹ 100.00",
   },
   {
     imgSrc:
@@ -313,7 +313,7 @@ export const GrocerieSlider = [
     price: "₹ 125.00",
     mrp: "M.R.P:",
     rupees: "₹ 160",
-    save: "₹ 35.00",
+    save: "Save ₹ 35.00",
   },
   {
     imgSrc:
@@ -322,7 +322,7 @@ export const GrocerieSlider = [
     price: "₹ 566.00",
     mrp: "M.R.P:",
     rupees: "₹ 609",
-    save: "₹ 43.00",
+    save: "Save ₹ 43.00",
   },
   {
     imgSrc:
@@ -331,7 +331,7 @@ export const GrocerieSlider = [
     price: "₹ 637.00",
     mrp: "M.R.P:",
     rupees: "₹ 635",
-    save: "₹ 48.00",
+    save: "Save ₹ 48.00",
   },
   {
     imgSrc:
@@ -340,7 +340,7 @@ export const GrocerieSlider = [
     price: "₹ 99.00",
     mrp: "M.R.P:",
     rupees: "₹ 170",
-    save: "₹ 71.00",
+    save: "Save ₹ 71.00",
   },
 ];
 
