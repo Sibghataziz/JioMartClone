@@ -1,3 +1,4 @@
+import useAPICall from "../../CustomHooks/useAPICall";
 import {
   SINGLE_GET_FAILURE,
   SINGLE_GET_REQUEST,
@@ -21,7 +22,7 @@ const singleGetFailure = () => {
   };
 };
 
-export const singleProduct = (url) => async (dispatch) => {
+export const getSingleProduct = (url) => async (dispatch) => {
   const { getData } = useAPICall();
   dispatch(singleGetRequest());
   const data = await getData(url);

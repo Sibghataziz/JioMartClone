@@ -113,7 +113,7 @@ export default function ProductItem({
         </Center>
       </Box>
       
-      <Box mt={2} mb={2}>
+      <Box mt={2} mb={2} >
         <Heading size="sm" fontWeight={"medium"}>
           {item_name.length < 20
             ? item_name

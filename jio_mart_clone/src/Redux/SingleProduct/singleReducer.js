@@ -1,32 +1,32 @@
 import { SINGLE_GET_FAILURE, SINGLE_GET_REQUEST, SINGLE_GET_SUCCESS } from "./actionType"
 
 const initState = {
-    isLoading:false,
-    isError:false,
-    data:[]
+    loading:false,
+    error:false,
+    product:{}
 }
 export const singleProductReducer = (state=initState,action)=>{
     switch(action.type){
         case SINGLE_GET_REQUEST:
             return{
                 ...state,
-                isLoading:true,
-                isError:false,
-                data : []
+                loading:true,
+                error:false,
+                product : {}
             }
         case SINGLE_GET_SUCCESS:
             return{
                 ...state,
-                isLoading:false,
-                isError:false,
-                data: action.payload
+                loading:false,
+                error:false,
+                product: action.payload
             }  
         case SINGLE_GET_FAILURE:
             return{
                 ...state,
-                isLoading:false,
-                isError:true,
-                data : []
+                loading:false,
+                error:true,
+                product : {}
             }      
         default:
             return state    

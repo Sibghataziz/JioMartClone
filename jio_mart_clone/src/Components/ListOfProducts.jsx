@@ -12,7 +12,6 @@ import useAPICall from "../CustomHooks/useAPICall";
 import { getProducts, getInfiniteProducts } from "../Redux/Products/action";
 import InfiniteScroll from "react-infinite-scroll-component";
 import ProductItem from "./ProductItem";
-import { Link } from "react-router-dom";
 
 export default function ListOfProducts({
   windowWidth,
@@ -89,9 +88,13 @@ export default function ListOfProducts({
     <Box bg="white" p={5}>
       <h4 style={{ margin: "10px 10px" }}>ALL PRODUCTS</h4>
       {loading ? (
-        <h1>Loading......</h1>
+        <Center m={5}>
+        <Spinner />
+      </Center>
       ) : error ? (
-        <h1>Something went wrong please..... Please refresh </h1>
+        <Center>
+        Something Went wrong....... <br /> Please Refresh
+      </Center>
       ) : (
         <Box>
           <InfiniteScroll
