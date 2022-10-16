@@ -3,9 +3,10 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import AllProduct from "../Pages/AllProduct";
 import DummyHome from "./DummyHome";
-import Checkout from './Checkout'
+import Checkout from './Checkout';
 import SignIn_SignUp from "../Pages/SignIn_SignUp";
-import ProductDetails from '../Pages/ProductDetails'
+import ProductDetails from '../Pages/ProductDetails';
+import AccountPage from '../Pages/AccountPage'
 
 export default function AllRoutes() {
   return (
@@ -16,6 +17,7 @@ export default function AllRoutes() {
         <Route path='/checkout/:id' element={<Checkout/>} />
         <Route path="/account/:page" element={<SignIn_SignUp/>}/>
         <Route path="/products/:product_category/:product_id" element={<ProductDetails/>}/>
+        <Route path="/account" element={<AccountPage/>}/>
       </Routes>
     </Box>
   );

@@ -1,17 +1,17 @@
 export default function useAPICall() {
   const baseUrl = `http://localhost:3001`;
   
-  const postData = async (url, todo) => {
+  const postData = async (url, input) => {
     try {
       const res = await fetch(url, {
         method: "POST",
-        body: JSON.stringify(todo),
+        body: JSON.stringify(input),
         headers: {
           "Content-type": "application/json",
         },
       });
       const data = await res.json();
-      console.log(data);
+      // console.log(data);
       return data;
     } catch (error) {
       console.log(error);

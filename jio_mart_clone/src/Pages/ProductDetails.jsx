@@ -139,7 +139,7 @@ export default function ProductDetails() {
             </Box>
 
             <Box w="75%">
-              <Box>
+              <Box width='100%'>
                 {" "}
                 <Image boxShadow="lg" src={product.item_img_url} />{" "}
               </Box>
