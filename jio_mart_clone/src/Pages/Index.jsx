@@ -21,27 +21,31 @@ import {
 } from "../Components/HomePage/data";
 import Categorydata from "../Components/HomePage/Slide/Category";
 import Kids from "../Components/HomePage/Slide/Kids";
+import Slider from '../Components/HomePage/Slider'
 
 function Index() {
   return (
     <div>
       <Box>
+        <Slider/>
+      </Box>
+      <Box>
         <Box>
-          <img
+          <img width='100%'
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1665654011_SBI_Unit.jpg"
             alt="bast_Sale"
           />
         </Box>
 
         <Box>
-          <img
+          <img width='100%'
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1654714506_Free-Home-Delivery--strip-1240-X-162.jpg"
             alt="lowerBaner "
           />
         </Box>
 
-        <Flex>
-          <img
+        <Flex mb={10}>
+          <img 
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1665425391_Camp-A-Desktop.jpg"
             alt=""
           />
@@ -62,7 +66,7 @@ function Index() {
         </Box>
 
         <Box m={2}  >
-          <img
+          <img width='100%'
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1665072906_Oct-6_Slim-Banner_web.jpg"
             alt=""
           />
@@ -73,7 +77,7 @@ function Index() {
         <ShopCategory />
         <Link to="./">
           <Box m={2}  mt={'1rem'} >
-            <img
+            <img width='100%'
               src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1624041574_web_static.jpg"
               alt=""
             />
@@ -85,8 +89,8 @@ function Index() {
         <RecomendedSlide />
 
         <div>
-          <Box m={2} mt={"-0.4rem"} >
-            <Img
+          <Box m={2} mt={"-0.4rem"}  >
+            <Img 
               src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1665657938_Fav-Delicacies-1680-320.jpg"
               alt=""
             ></Img>

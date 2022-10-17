@@ -27,7 +27,7 @@ export const loginReducer = (state = initState, action) => {
       };
 
     case LOGIN_SUCCESS:
-      Setdata("JioMartCloneUser", action.payload);
+      Setdata("JioMartCloneUser", action.payload[0]);
       return {
         ...state,
         isAuth: action.payload[0],

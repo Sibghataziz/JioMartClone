@@ -97,13 +97,14 @@ const Navbar = () => {
           />
         </GridItem>
         <GridItem rowSpan={2} colStart={4} colEnd={6} pt="15px" pl={["25px","50px","110px"]}  >
-          <Box display={"flex"} justifyContent="flex-end" w={["75px","75px","150px"]}>
+          <Box display={"flex"} justifyContent="flex-end" w={["80px","80px","160px"]}>
             <Link to={`/account${isAuth ? "" : "/login"}`}>
               <Box
                 display={"flex"}
                 color="white"
                 cursor={"pointer"}
                 mr={"8px"}
+                width={28}
                 >
                 <img
                   src="https://www.jiomart.com/msassets/images/icons/loginicon_be.svg"
@@ -116,7 +117,7 @@ const Navbar = () => {
             </Link>
 
             <Link to="/checkout/cart">
-              <Box display={"flex"} color="white" cursor={"pointer"} pl={["20px"]}>
+              <Box display={"flex"} color="white" cursor={"pointer"} pl={["20px"]} width={28}>
                 <img
                   src="	https://www.jiomart.com/msassets/images/icons/cart-white.svg"
                   height="24px"

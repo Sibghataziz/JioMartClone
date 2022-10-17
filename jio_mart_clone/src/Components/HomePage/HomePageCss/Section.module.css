@@ -34,7 +34,7 @@
   display: grid;
   
   /* grid-template-columns: repeat(2, 1fr); */
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 16.6rem));
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 18rem));
   justify-content: center;
 }
 
@@ -69,10 +69,11 @@
 .hotestD {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, 13rem);
+  grid-template-columns: repeat(auto-fit, 16rem);
   justify-content: center;
   margin-left: 0.3rem;
   margin: 5px;
+  padding-left: 2rem;
 }
 .zoom:hover {
   overflow: hidden;
@@ -185,7 +186,7 @@
 
 .abovefooter {
   /* border: 1px solid green; */
- 
+  
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(auto, 38rem));
   justify-content: center;

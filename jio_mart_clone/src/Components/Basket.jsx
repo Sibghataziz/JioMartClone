@@ -5,6 +5,7 @@ import { PlusMinusBtn } from './JioButton';
 
 const Basket = ({ cartDetails }) => {
   const cards = cartDetails.products.map((product) => {
+    console.log(product)
     return (
       <div key={uuidv4()} className='cart-cards'>
         <div>
