@@ -10,7 +10,7 @@ function TopDealSlides() {
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 406, itemsToShow: 3, itemsToScroll: 3 },
-    { width: 800, itemsToShow: 5, itemsToScroll: 5 },
+    { width: 800, itemsToShow: 5.5, itemsToScroll: 5 },
     { width: 1200, itemsToShow: 6, itemsToScroll: 6 },
   ];
   const sliderRef = useRef(null);
@@ -22,7 +22,7 @@ function TopDealSlides() {
   return (
     <div>
       <Box mt={"1rem"}>
-        <Text as={"b"} fontSize="xl" m={"3rem"}>
+        <Text as={"b"} fontSize="xl" m={"5%"}>
           Top Deals
         </Text>
       </Box>

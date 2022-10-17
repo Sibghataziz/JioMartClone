@@ -24,7 +24,7 @@ function Categorydata() {
   return (
     <div>
       <Box mt={'1rem'} mb={"1rem"} >
-        <Text as={"b"} fontSize="xl" m={"3rem"}>
+        <Text as={"b"} fontSize="xl" m={"5%"}>
           Shop by Categories
         </Text>
       </Box>

@@ -24,7 +24,7 @@ function ShopCategory() {
     <div>
       <Link to="/">
         <Box>
-          <Text as={"b"} fontSize="xl" m={"3rem"}>
+          <Text as={"b"} fontSize="xl" m={"5%"}>
             Shop from Top Categories
           </Text>
         </Box>

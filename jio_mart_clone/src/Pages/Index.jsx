@@ -45,21 +45,21 @@ function Index() {
         </Box>
 
         <Flex mb={10}>
-          <img 
+          <img width='100%'
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1665425391_Camp-A-Desktop.jpg"
             alt=""
           />
         </Flex>
 
         <Box m={2} >
-          <img
+          <img width='100%'
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1662531217_Wednesday_Bonus.jpg"
             alt="lowerBaner "
           />
         </Box>
 
         <Box m={2}>
-          <img
+          <img width='100%'
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1664448687_Image_3.jpg"
             alt=""
           />
@@ -76,7 +76,7 @@ function Index() {
         {/* if u need Rap it inside the Link */}
         <ShopCategory />
         <Link to="./">
-          <Box m={2}  mt={'1rem'} >
+          <Box m={2}   >
             <img width='100%'
               src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1624041574_web_static.jpg"
               alt=""
@@ -130,7 +130,6 @@ function Index() {
               {BigWomenData.map((wom) => (
                 <div className="post">
                   <img
-                    className={styles.moon}
                     style={{ borderRadius: "0.5rem" }}
                     src={wom.image}
                     alt="wom"
@@ -192,9 +191,9 @@ function Index() {
         </div>
 
         <div>
-          <Box ml={"0.6rem"}  mt={"1rem"}>
+          <Box  mt={"1rem"}>
             <img
-              width={"99.3%"}
+              width={"100%"}
               src="https://www.jiomart.com/images/category/563/girls-20200831.jpg"
               alt=""
             />

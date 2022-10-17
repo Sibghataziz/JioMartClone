@@ -8,8 +8,8 @@ import Carousel from "react-elastic-carousel";
 function Kids() {
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
-    { width: 406, itemsToShow: 3, itemsToScroll: 3 },
-    { width: 800, itemsToShow: 4, itemsToScroll: 4 },
+    { width: 406, itemsToShow: 2, itemsToScroll: 2 },
+    { width: 800, itemsToShow: 4.5, itemsToScroll: 4 },
     { width: 1200, itemsToShow: 5, itemsToScroll: 5 },
   ];
   const sliderRef = useRef(null);
@@ -21,7 +21,7 @@ function Kids() {
   return (
     <div>
       <Box mt={"1rem"} mb={'1rem'}>
-        <Text as={"b"} fontSize="xl" m={"3rem"} mt={'2rem'}>
+        <Text as={"b"} fontSize="xl" m={"4%"} mt={'2rem'}>
           Kids Fashion
         </Text>
       </Box>

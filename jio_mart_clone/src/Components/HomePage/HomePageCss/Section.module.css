@@ -30,12 +30,12 @@
   margin: auto;
   /* border: 1px solid brown; */
   /* width: 98%; */
-  gap: 20px;
+  gap: 2rem;
   display: grid;
-  
   /* grid-template-columns: repeat(2, 1fr); */
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 18rem));
+  grid-template-columns: repeat(auto-fit, minmax(auto, 16.5rem));
   justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .Choco {
@@ -69,11 +69,11 @@
 .hotestD {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, 16rem);
+  grid-template-columns: repeat(auto-fit, 13.7rem);
   justify-content: center;
   margin-left: 0.3rem;
-  margin: 5px;
-  padding-left: 2rem;
+  margin: 10px;
+  /* padding-left: rem; */
 }
 .zoom:hover {
   overflow: hidden;
@@ -83,7 +83,7 @@
 }
 
 .kidssmall {
-  height: 20rem;
+  /* height: 20rem; */
   width: 100%;
   margin: auto;
   margin-bottom: 5rem;
@@ -106,7 +106,7 @@
 
 .menimg {
   /* height: 30rem; */
-  width: 98%;
+  width: 100%;
   margin: auto;
   /* margin-bottom: 2rem; */
 }
@@ -115,7 +115,7 @@
   /* width: 90%; */
   gap: 1rem;
   /* grid-template-columns: repeat(2, 1fr); */
-  grid-template-columns: repeat(auto-fit, minmax(auto, 35rem));
+  grid-template-columns: repeat(auto-fit, minmax(auto, 36rem));
   justify-content: center;
   /* grid-gap: 2rem; */
   margin: auto;
@@ -126,13 +126,13 @@
   margin-top: 0.8rem;
   font-size: 1.3rem;
   font-weight: 700;
-  margin-left: 3rem;
+  margin-left: 4%;
   margin-bottom: 1rem;
 }
 
 .menssmall {
   /* height: 10rem; */
-  width: 98%;
+  width: 100%;
   margin: auto;
   /* border:  1px solid blue; */
 }
@@ -140,7 +140,7 @@
 .mensfashion {
   margin-top: 2rem;
   display: grid;
-  gap: 0.4rem;
+  gap: 1rem;
   grid-template-columns: repeat(auto-fit, 14rem);
   justify-content: center;
   /* margin: auto; */
@@ -150,7 +150,7 @@
   /* border: 2px solid red ; */
 }
 .fashion {
-  width: 13rem;
+  width: 100%;
   margin: auto; 
 }
 .dhoom:hover {
@@ -188,7 +188,7 @@
   /* border: 1px solid green; */
   
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(auto, 38rem));
+  grid-template-columns: repeat(auto-fit, minmax(auto, 39rem ));
   justify-content: center;
   /* margin-left: 1rem; */
  
