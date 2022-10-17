@@ -41,7 +41,7 @@
   width: 45px;
   height: 45px;
   position: absolute;
-  z-index: 10;
+  z-index: 1;
  
 }
 .discountimg {
@@ -151,5 +151,3 @@
   width: 24px;
   margin-right: 5px;
 }
-
-
