@@ -1,7 +1,7 @@
-import { Flex, Box, useDisclosure } from "@chakra-ui/react";
+import {  Box, useDisclosure } from "@chakra-ui/react";
 import { IconButton } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { Input, Image } from "@chakra-ui/react";
+import { Input, Image,Grid,GridItem } from "@chakra-ui/react";
 import { useRef } from "react";
 import LeftDrawer from "./LeftDrawer";
 import { Link, useNavigate } from "react-router-dom";
@@ -14,7 +14,7 @@ const Navbar = () => {
   const { isOpen, onClose, onOpen } = useDisclosure();
   const btnRef = useRef();
   const [search, setSearch] = useState("");
-const {isAuth} = useSelector(state=>state.auth)
+  const { isAuth } = useSelector((state) => state.auth);
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -54,55 +54,69 @@ const {isAuth} = useSelector(state=>state.auth)
 
   return (
     <>
-      <div className={Styles.navbar}>
-        <Flex bg="#008ecc" p="6px" align="center" justify="space-evenly">
+    <div className={Styles.navbar}>    
+      <Grid
+        templateColumns="repeat(6,1fr)"
+        
+        h="70px"
+        gap={["10px","25px"]}
+        pr={["5px","10px","70px"]}
+        pl={["5px","10px","70px"]}
+      >
+        <GridItem rowSpan={1} pt="7px"  >
           <IconButton
             colorScheme="#008ecc"
-            size="xxl"
-            icon={<HamburgerIcon color="#fff" bg="#008ecc" w={8} h={8} />}
+            icon={<HamburgerIcon color="#fff" bg="#008ecc" w={[6,8]} h={[6,8]} />}
             onClick={onOpen}
             ref={btnRef}
-          />
-          <Box>
-            {" "}
-            <Link to={`/`}>
-            <Image
-              className={Styles.image}
-              cursor={"pointer"}
-              src="https://www.jiomart.com/assets/version1664452279/smartweb/images/jiomart_logo_beta.svg"
-              alt="Jio Icon"
             />
+        </GridItem>
+        <GridItem rowSpan={1} pt="10px"  >
+          <Box>
+            <Link to={`/`}>
+              <Image
+                w={["110px"]}
+                minWidth={"75px"}
+                className={Styles.image}
+                cursor={"pointer"}
+                src="https://www.jiomart.com/assets/version1664452279/smartweb/images/jiomart_logo_beta.svg"
+                alt="Jio Icon"
+              />
             </Link>
           </Box>
+        </GridItem>
+        <GridItem rowSpan={2} pt="10px"  >
           <Input
-            size={"md"}
+             w={["75px","150px","200px","250px","400px","650px"]}
             value={search}
             onChange={handleChange}
             onKeyDown={handleEnter}
             placeholder="Search essentials, groceries, and more..."
             bg="#fff"
-            w="700px"
+            
           />
-          <Box display={"flex"} justifyContent="space-between">
-            <Link to={`/account${isAuth?"":'/login'}`}>
+        </GridItem>
+        <GridItem rowSpan={2} colStart={4} colEnd={6} pt="15px" pl={["25px","50px","110px"]}  >
+          <Box display={"flex"} justifyContent="flex-end" w={["75px","75px","150px"]}>
+            <Link to={`/account${isAuth ? "" : "/login"}`}>
               <Box
                 display={"flex"}
-                pr="20px"
                 color="white"
                 cursor={"pointer"}
-                mr="20px"
-              >
+                mr={"8px"}
+                >
                 <img
                   src="https://www.jiomart.com/msassets/images/icons/loginicon_be.svg"
                   height="10px"
                   width="24px"
                   alt=""
                 />
-                {isAuth ? "My Account" : "SignIn/SignUp"}
+                {isAuth ? "My Account" : "SignIn"}
               </Box>
             </Link>
+
             <Link to="/checkout/cart">
-              <Box display={"flex"} color="white" cursor={"pointer"}>
+              <Box display={"flex"} color="white" cursor={"pointer"} pl={["20px"]}>
                 <img
                   src="	https://www.jiomart.com/msassets/images/icons/cart-white.svg"
                   height="24px"
@@ -113,10 +127,11 @@ const {isAuth} = useSelector(state=>state.auth)
               </Box>
             </Link>
           </Box>
-        </Flex>
+        </GridItem>
+      </Grid>
+  </div>
 
-        <LeftDrawer isOpen={isOpen} onClose={onClose} btnRef={btnRef} />
-      </div>
+      <LeftDrawer isOpen={isOpen} onClose={onClose} btnRef={btnRef} />
     </>
   );
 };
