@@ -21,6 +21,7 @@ const AccountPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    console.log(isAuth)
     if (!isAuth) {
       navigate("/account/login");
     }

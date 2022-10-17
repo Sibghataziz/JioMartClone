@@ -10,7 +10,13 @@ import { singleProductReducer } from "./SingleProduct/singleReducer";
 import { cartReducer } from "./Cart/cartReducer";
 import productReducer from "./Products/productReducer";
 
-import { cartReducer } from "./Cart/cartReducer";
+const functionOrObject = (store) => (next) => (action) => {
+    if (typeof action === "function") {
+      console.log(1);
+      return action(store.dispatch);
+    }
+    return next(action);
+  };
 
   export const rootReducer = combineReducers({
     auth: loginReducer,
@@ -19,15 +25,18 @@ import { cartReducer } from "./Cart/cartReducer";
     products: productReducer,
   });
 
-const composeEnhancers =
-  (typeof window !== "undefined" &&
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
-  compose;
 
-const enhancer = composeEnhancers(applyMiddleware(thunk));
+const composeEnhancers =
+  typeof window === "object" && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+      })
+    : compose;
+
+const middlewares = applyMiddleware(thunk);
+const enhancer = composeEnhancers(middlewares);
 
 export const store = createStore(rootReducer, enhancer);
 
-// store.subscribe(() => {
-//   console.log("store got updated", store.getState().products);
-// });
+store.subscribe(() => {
+  console.log("store got updated", store.getState());
+});
