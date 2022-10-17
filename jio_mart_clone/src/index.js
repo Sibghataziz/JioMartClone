@@ -1,22 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import {BrowserRouter as Router} from "react-router-dom";
-import 'antd/dist/antd.css';
-import  {store } from './Redux/store'
-import ContextProvider from './Context/ContextProvider';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+import { ChakraProvider } from "@chakra-ui/react";
+import { Provider } from "react-redux";
+import { store } from "./Redux/store";
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <React.StrictMode>
-    <Router>
+    <ChakraProvider>
       <Provider store={store}>
-        <ContextProvider>
+        <BrowserRouter>
           <App />
-        </ContextProvider>
+        </BrowserRouter>
       </Provider>
-    </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
+    </ChakraProvider>
+  </React.StrictMode>
 );
-
