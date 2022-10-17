@@ -1,32 +1,17 @@
-import reducer from "./Products/reducer";
-import {
-  applyMiddleware,
-  compose,
-  legacy_createStore as createStore,
-} from "redux";
+import { applyMiddleware, combineReducers, createStore, compose } from "redux";
 import thunk from "redux-thunk";
 
-const functionOrObject = (store) => (next) => (action) => {
-    if (typeof action === "function") {
-      console.log(1);
-      return action(store.dispatch);
-    }
-    return next(action);
-  };
+import { cartReducer } from "./Cart/cartReducer";
 
+export const rootReducer = combineReducers({
+  cart: cartReducer,
+});
 
 const composeEnhancers =
-  typeof window === "object" && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
-      })
-    : compose;
+  (typeof window !== "undefined" &&
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
+  compose;
 
-const middlewares = applyMiddleware(thunk);
-const enhancer = composeEnhancers(middlewares);
+const enhancer = composeEnhancers(applyMiddleware(thunk));
 
-
-export const store = createStore(reducer, enhancer);
-
-// store.subscribe(() => {
-//   console.log("store got updated", store.getState().products);
-// });
+export const store = createStore(rootReducer, enhancer);
