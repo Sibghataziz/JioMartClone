@@ -29,11 +29,12 @@
 .groceriesD {
   margin: auto;
   /* border: 1px solid brown; */
-  width: 96%;
+  /* width: 98%; */
   gap: 20px;
   display: grid;
+  
   /* grid-template-columns: repeat(2, 1fr); */
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 16rem));
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 16.6rem));
   justify-content: center;
 }
 
@@ -104,8 +105,8 @@
 
 .menimg {
   /* height: 30rem; */
-  width: 100%;
-  /* margin: auto; */
+  width: 98%;
+  margin: auto;
   /* margin-bottom: 2rem; */
 }
 .menf {
@@ -113,7 +114,7 @@
   /* width: 90%; */
   gap: 1rem;
   /* grid-template-columns: repeat(2, 1fr); */
-  grid-template-columns: repeat(auto-fit, minmax(auto, 37rem));
+  grid-template-columns: repeat(auto-fit, minmax(auto, 35rem));
   justify-content: center;
   /* grid-gap: 2rem; */
   margin: auto;
@@ -121,7 +122,7 @@
 
 .text {
   color: black;
-  margin-top: 2rem;
+  margin-top: 0.8rem;
   font-size: 1.3rem;
   font-weight: 700;
   margin-left: 3rem;
@@ -130,15 +131,15 @@
 
 .menssmall {
   /* height: 10rem; */
-  width: 100%;
-  /* margin: auto; */
+  width: 98%;
+  margin: auto;
   /* border:  1px solid blue; */
 }
 
 .mensfashion {
-  margin-top: 3rem;
+  margin-top: 2rem;
   display: grid;
-  gap: 1rem;
+  gap: 0.4rem;
   grid-template-columns: repeat(auto-fit, 14rem);
   justify-content: center;
   /* margin: auto; */
@@ -148,7 +149,8 @@
   /* border: 2px solid red ; */
 }
 .fashion {
-  width: 14rem;
+  width: 13rem;
+  margin: auto; 
 }
 .dhoom:hover {
   overflow: hidden;
@@ -164,13 +166,14 @@
 .posterimg {
   /* height: 76rem; */
   width: 100%;
-  /* margin-bottom: 5rem; */
+  margin: auto;
+  margin-top: 1.5rem;
   /* border:1px solid red; */
 }
 
 .downPicImg {
   /* height: 50rem; */
-  width: 100%;
+  /* width: 100%; */
   /* margin-bottom: 3rem; */
   /* border:1px solid red; */
 }
@@ -181,11 +184,13 @@
 }
 
 .abovefooter {
+  /* border: 1px solid green; */
+ 
   display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(auto, 37.5rem));
+  grid-template-columns: repeat(auto-fit, minmax(auto, 38rem));
   justify-content: center;
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
+ 
 }
 .poster {
   margin: 1rem;
