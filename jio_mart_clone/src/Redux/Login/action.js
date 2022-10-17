@@ -34,7 +34,7 @@ export const registerSuccess = (payload) => {
     type: REGISTER_SUCCESS,
     payload,
   };
-};
+}; 
 
 export const registerLoading = () => {
   return {
@@ -55,7 +55,7 @@ export const Login = (url) => async (dispatch) => {
     const res = await fetch(url);
     if (res.status === 200) {
       const data = await res.json();
-      // console.log(data);
+      console.log(data);
       dispatch(loginSuccess(data));
     } else {
       dispatch(loginFailure());

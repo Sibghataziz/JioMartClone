@@ -119,11 +119,11 @@ const RegisterForm = ({
           Sign up
         </Text>
 
-        <Text color={"#8d9bad "} ml={"30px"} mb={"30px"}>
+        <Text color={"#8d9bad "} ml={"20px"} mb={"30px"}>
           Please enter your details.
         </Text>
         <Input
-          mb={"30px"}
+          mb={"0px"}
           placeholder="Your First Name"
           name="firstName"
           onChange={handleChange}
@@ -135,7 +135,7 @@ const RegisterForm = ({
           </Text>
         )}
         <Input
-          mb={"30px"}
+          mt={"30px"}
           placeholder="Your Last Name"
           name="lastName"
           onChange={handleChange}
@@ -147,18 +147,18 @@ const RegisterForm = ({
           </Text>
         )}
         <Input
-          mb={"30px"}
+          mt={"30px"}
           placeholder="Your Email Id"
           name="email"
           onChange={handleChange}
           value={email}
         />
         {msg.email.status && (
-          <Text fontSize="xs" color="crimson">
+          <Text   fontSize="xs" color="crimson">
             {msg.email.notice}
           </Text>
         )}
-        <InputGroup size="md">
+        <InputGroup mt={'30px'} size="md">
           <Input
             mb={"30px"}
             pr="4.5rem"
@@ -173,16 +173,17 @@ const RegisterForm = ({
               {show ? <ViewOffIcon /> : <ViewIcon />}
             </Button>
           </InputRightElement>
-          {msg.password1.status && (
-            <Text fontSize="xs" color="crimson">
+          
+        </InputGroup>
+        {msg.password1.status && (
+            <Text mt={'-30px'} pb='25px' fontSize="xs" color="crimson">
               {msg.password1.notice}
             </Text>
           )}
-        </InputGroup>
 
-        <InputGroup size="md">
+        <InputGroup  size="md">
           <Input
-            mb={"30px"}
+            
             pr="4.5rem"
             type={show ? "text" : "password"}
             placeholder="Confirm password"
@@ -191,19 +192,21 @@ const RegisterForm = ({
             value={password2}
           />
           <InputRightElement width="4.5rem">
-            <Button h="1.75rem" size="sm" onClick={handleClick}>
+            <Button  h="1.75rem" size="sm" onClick={handleClick}>
               {show ? <ViewOffIcon /> : <ViewIcon />}
             </Button>
           </InputRightElement>
+        </InputGroup>
+
+        <Text mb={"30px"} fontSize="13px" color="##e3c6b0">
+          Use 8 or more characters with a mix of letters & numbers <br />
           {msg.password2.status && (
             <Text fontSize="xs" color="crimson">
               {msg.password2.notice}
             </Text>
           )}
-        </InputGroup>
-        <Text mb={"30px"} fontSize="13px" color="##e3c6b0">
-          Use 8 or more characters with a mix of letters & numbers
         </Text>
+        
 
         <Flex mb={"1rem"} justifyContent={"center"} alignItems={"center"}>
           <Box p={"10px"} fontSize={"32px"} color={"#48df62"}>

@@ -31,7 +31,7 @@ export default function ListOfProducts({
   };
 
   const createUrl = (val) => {
-    let url = `${baseUrl}/products?_limit=20&_page=${
+    let url = `${baseUrl}/products?_limit=8&_page=${
       page + val
     }&item_category=${product_category}`;
 
@@ -107,7 +107,7 @@ export default function ListOfProducts({
                 <Spinner />
               </Center>
             }
-            scrollThreshold="100%"
+            scrollThreshold="80%"
           >
             <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} width="100%">
               {products.map((product) => (

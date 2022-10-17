@@ -69,6 +69,7 @@ export default function ProductDetails() {
     <Box>
       <Breadcrumb
         m="auto"
+        mt='28'
         pl="10px"
         w="90%"
         fontSize="14px"

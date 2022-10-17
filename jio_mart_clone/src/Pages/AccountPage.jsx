@@ -8,13 +8,24 @@ import {
   Spacer,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { CgProfile } from "react-icons/cg";
 import { BsCalendar2Check } from "react-icons/bs";
 import { MdLocationOn } from "react-icons/md";
 import { BsCreditCardFill } from "react-icons/bs";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const AccountPage = () => {
+  const { isAuth } = useSelector((state) => state.auth);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!isAuth) {
+      navigate("/account/login");
+    }
+  }, []);
+
   return (
     <Box bg={"whitesmoke"} padding={"50px 150px"}>
       <Heading mb="20px" fontSize="25px" as="h2">
@@ -40,13 +51,12 @@ const AccountPage = () => {
               <CgProfile />{" "}
             </GridItem>
             <GridItem ml="-135px" w="100%" h="10" bg="#008ecc">
-              <Text as={"b"}>Debu Vats</Text> <br />
-              <Text as={'i'} color={"#cecece"} fontSize={"12px"}>
-                Debuvats@gmail.com
-              </Text> 
-
-              <Text  color={"#cecece"} fontSize={"12px"}>
-                8979405953
+              <Text as={"b"}>{`${isAuth.firstName} ${isAuth.lastName}`}</Text> <br />
+              <Text as={"i"} color={"#cecece"} fontSize={"12px"}>
+                {isAuth.email}
+              </Text>
+              <Text color={"#cecece"} fontSize={"12px"}>
+                {isAuth.number}
               </Text>
             </GridItem>
 
@@ -61,7 +71,7 @@ const AccountPage = () => {
               bg="#66bbe0"
             >
               <Flex>
-                <Box fontSize={'25px'} mr='15px'>
+                <Box fontSize={"25px"} mr="15px">
                   <BsCreditCardFill />
                 </Box>
                 <Box>Payment Method</Box>
@@ -78,7 +88,7 @@ const AccountPage = () => {
               bg="#66bbe0"
             >
               <Flex>
-                <Box fontSize={'25px'} mr='15px'>
+                <Box fontSize={"25px"} mr="15px">
                   <BsCalendar2Check />
                 </Box>
                 <Box>Order history</Box>
@@ -95,7 +105,7 @@ const AccountPage = () => {
               bg="#66bbe0"
             >
               <Flex>
-                <Box fontSize={'25px'} mr='15px'>
+                <Box fontSize={"25px"} mr="15px">
                   <MdLocationOn />
                 </Box>
                 <Box> Delivery Addresses</Box>
@@ -122,7 +132,7 @@ const AccountPage = () => {
                 Full Name
               </Text>
               <Text fontSize={"14px"} as={"b"}>
-                Debu vats
+              {`${isAuth.firstName} ${isAuth.lastName}`}
               </Text>
             </GridItem>
             <GridItem w="100%" h="10">
@@ -139,7 +149,7 @@ const AccountPage = () => {
                 Email id
               </Text>
               <Text fontSize={"14px"} as={"b"}>
-                Debuvats@gmail.com
+                {isAuth.email}
               </Text>
             </GridItem>
 
@@ -148,13 +158,13 @@ const AccountPage = () => {
                 Mobile Number
               </Text>
               <Text fontSize={"14px"} as={"b"}>
-                8979405953
+                {isAuth.number}
               </Text>
             </GridItem>
           </Grid>
         </GridItem>
 
-        <GridItem mt={'-10px'} borderRadius={"10px"} bg={"white"} w="80%">
+        <GridItem mt={"-10px"} borderRadius={"10px"} bg={"white"} w="80%">
           <Box p={"20px"}>
             <Text fontSize={"sm"} as={"b"}>
               My List

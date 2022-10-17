@@ -11,8 +11,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import useAPICall from "../CustomHooks/useAPICall";
+import { Login } from "../Redux/Login/action";
 
 const initMsg = {
   status: false,
@@ -32,6 +34,8 @@ const LoginForm = ({
   const [msg, setMsg] = useState(initMsg);
   const navigate = useNavigate();
   const { baseUrl, getData } = useAPICall();
+  const dispatch = useDispatch()
+  // let data = null;
 
   const handleOtpSend = async () => {
     if (
@@ -45,7 +49,7 @@ const LoginForm = ({
       } else {
         setOtpRequestSend(!otpRequestSend);
       }
-      console.log(phoneNumber);
+      // console.log(phoneNumber);
       sendOtp();
     } else {
       handleMsg({ status: true, notice: "invalid phone number!!!" });
@@ -57,6 +61,7 @@ const LoginForm = ({
       handleMsg({ status: true, notice: "Please enter the OTP!!!!" });
     } else {
       if (handleOtp()) {
+        dispatch(Login(`${baseUrl}/users?number=${phoneNumber}`))
         navigate("/");
       } else {
         handleMsg({ status: true, notice: "invalid otp!!!" });

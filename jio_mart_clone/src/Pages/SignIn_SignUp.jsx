@@ -1,5 +1,6 @@
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import LoginForm from "../Components/LoginForm";
 import RegisterForm from "../Components/RegisterForm";
@@ -8,7 +9,13 @@ export default function SignIn_SignUp() {
   const { page } = useParams();
   const [otp, setOtp] = useState("");
   const [inputOtp, setInputOtp] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState(7980121239);
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const {isAuth} = useSelector(state=>state.auth)
+  const navigate = useNavigate()
+
+  if(isAuth){
+    navigate('/account')
+  }
 
   const handleOtp = () => {
     console.log(otp, "otp");
@@ -25,7 +32,9 @@ export default function SignIn_SignUp() {
     setInputOtp(e.target.value);
   };
 
-  const sendOtp = () => {};
+  const sendOtp = () => {
+    alert(`Your OTP is: ${otp}`)
+  };
 
   useEffect(() => {
     setOtp(Math.floor(100000 + Math.random() * 900000));
