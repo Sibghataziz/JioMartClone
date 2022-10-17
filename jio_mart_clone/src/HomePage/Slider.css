@@ -5,8 +5,7 @@
   box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
   /* margin-bottom: 0.6rem; */
   /* margin-top: 6rem; */
- margin: auto;
-
+  margin: auto;
 }
 @media screen and (max-width: 100%) {
   .container-slider {
@@ -75,4 +74,3 @@
 .dot.active {
   background: rgb(32, 32, 32);
 }
-

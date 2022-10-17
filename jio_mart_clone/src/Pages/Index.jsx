@@ -1,14 +1,9 @@
 import {
   Box,
-  Button,
-  Container,
   Flex,
-  Heading,
   Img,
   Link,
-  Text,
 } from "@chakra-ui/react";
-
 import RecomendedSlide from "../HomePage/Slide/RecomendedSlide";
 import ShopCategory from "../HomePage/Slide/ShopCategory";
 import TopDealSlides from "../HomePage/Slide/TopDealSlides";
@@ -17,7 +12,6 @@ import {
   groceries,
   SmallWomenData,
   BigWomenData,
-  KidsFashion,
   downData,
   BigMenData,
   posterimg,
@@ -32,21 +26,21 @@ function Index() {
   return (
     <div>
       <Box>
-        <Box >
+        <Box>
           <img
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1665654011_SBI_Unit.jpg"
             alt="bast_Sale"
           />
         </Box>
 
-        <Box >
+        <Box>
           <img
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1654714506_Free-Home-Delivery--strip-1240-X-162.jpg"
             alt="lowerBaner "
           />
         </Box>
 
-        <Flex >
+        <Flex>
           <img
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1665425391_Camp-A-Desktop.jpg"
             alt=""
@@ -166,7 +160,7 @@ function Index() {
           <h3 class={styles.text}>Mens Fashion</h3>
           <div className={styles.menf}>
             {BigMenData.map((post) => (
-              <div >
+              <div>
                 <img
                   className={styles.moon}
                   style={{ borderRadius: "0.5rem" }}
@@ -194,7 +188,7 @@ function Index() {
         </div>
 
         <div>
-          <Box ml={"0.8rem"} mt={'2rem'}>
+          <Box ml={"0.8rem"} mt={"2rem"}>
             <img
               width={"99%"}
               src="https://www.jiomart.com/images/category/563/girls-20200831.jpg"
@@ -223,7 +217,6 @@ function Index() {
         </div>
 
         <Link to="groceries">
-
           <div className={styles.groceries}>
             <h3 class={styles.text}>Offers on Household and Personal Care</h3>
             <div className={styles.groceriesD}>

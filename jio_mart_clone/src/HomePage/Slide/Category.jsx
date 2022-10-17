@@ -31,7 +31,6 @@ function Categorydata() {
 
       <div className={styles.forflex}>
         <div
-          // className={styles.leftBtn}
           onClick={() => sliderRef.current.slickPrev()}
         ></div>
         <Box bg="white" w="98%" ml={'1rem'}>

@@ -79,7 +79,6 @@ const dataSlider = [
     title: "Lorem ipsum",
     subTitle: "Lorem",
   },
- 
 ];
 
 const Slider = () => {
