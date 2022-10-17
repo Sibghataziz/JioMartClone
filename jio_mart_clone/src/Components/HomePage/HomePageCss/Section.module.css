@@ -33,7 +33,7 @@
   gap: 2rem;
   display: grid;
   /* grid-template-columns: repeat(2, 1fr); */
-  grid-template-columns: repeat(auto-fit, minmax(auto, 16.5rem));
+  grid-template-columns: repeat(auto-fit, minmax(auto, 18rem));
   justify-content: center;
   margin-bottom: 2rem;
 }
@@ -65,11 +65,12 @@
   /* height: 40rem; */
   width: 100%;
   /* border: 1px solid salmon; */
+
 }
 .hotestD {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, 13.7rem);
+  grid-template-columns: repeat(auto-fit, 16rem);
   justify-content: center;
   margin-left: 0.3rem;
   margin: 10px;
@@ -126,7 +127,7 @@
   margin-top: 0.8rem;
   font-size: 1.3rem;
   font-weight: 700;
-  margin-left: 4%;
+  margin-left: 5%;
   margin-bottom: 1rem;
 }
 
@@ -161,7 +162,8 @@
 }
 
 .mmm {
-  width: 100%;
+  width: 95%;
+  display: block;
 }
 
 .posterimg {
@@ -188,13 +190,18 @@
   /* border: 1px solid green; */
   
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(auto, 39rem ));
+  /* grid-template-columns: repeat(auto-fit, minmax(auto, 38rem )); */
+  grid-template-columns: repeat(2,1fr);
   justify-content: center;
   /* margin-left: 1rem; */
  
 }
 .poster {
   margin: 1rem;
+  /* background-color: teal; */
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .items {

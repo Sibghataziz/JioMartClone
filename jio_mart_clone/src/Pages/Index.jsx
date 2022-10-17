@@ -1,9 +1,4 @@
-import {
-  Box,
-  Flex,
-  Img,
-  Link,
-} from "@chakra-ui/react";
+import { Box, Flex, Img, Link } from "@chakra-ui/react";
 import RecomendedSlide from "../Components/HomePage/Slide/RecomendedSlide";
 import ShopCategory from "../Components/HomePage/Slide/ShopCategory";
 import TopDealSlides from "../Components/HomePage/Slide/TopDealSlides";
@@ -21,52 +16,58 @@ import {
 } from "../Components/HomePage/data";
 import Categorydata from "../Components/HomePage/Slide/Category";
 import Kids from "../Components/HomePage/Slide/Kids";
-import Slider from '../Components/HomePage/Slider'
+import Slider from "../Components/HomePage/Slider";
 
 function Index() {
   return (
     <div>
       <Box>
-        <Slider/>
+        <Slider />
       </Box>
       <Box>
         <Box>
-          <img width='100%'
+          <img
+            width="100%"
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1665654011_SBI_Unit.jpg"
             alt="bast_Sale"
           />
         </Box>
 
         <Box>
-          <img width='100%'
+          <img
+            width="100%"
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1654714506_Free-Home-Delivery--strip-1240-X-162.jpg"
             alt="lowerBaner "
           />
         </Box>
 
         <Flex mb={10}>
-          <img width='100%'
+          <img
+            width="100%"
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1665425391_Camp-A-Desktop.jpg"
             alt=""
           />
         </Flex>
 
-        <Box m={2} >
-          <img width='100%'
+        <Box m={2}>
+          <img
+            width="100%"
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1662531217_Wednesday_Bonus.jpg"
             alt="lowerBaner "
           />
         </Box>
 
         <Box m={2}>
-          <img width='100%'
+          <img
+            width="100%"
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1664448687_Image_3.jpg"
             alt=""
           />
         </Box>
 
-        <Box m={2}  >
-          <img width='100%'
+        <Box m={2}>
+          <img
+            width="100%"
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1665072906_Oct-6_Slim-Banner_web.jpg"
             alt=""
           />
@@ -76,8 +77,9 @@ function Index() {
         {/* if u need Rap it inside the Link */}
         <ShopCategory />
         <Link to="./">
-          <Box m={2}   >
-            <img width='100%'
+          <Box m={2}>
+            <img
+              width="100%"
               src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1624041574_web_static.jpg"
               alt=""
             />
@@ -89,8 +91,8 @@ function Index() {
         <RecomendedSlide />
 
         <div>
-          <Box m={2} mt={"-0.4rem"}  >
-            <Img 
+          <Box m={2} mt={"-0.4rem"}>
+            <Img
               src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1665657938_Fav-Delicacies-1680-320.jpg"
               alt=""
             ></Img>
@@ -191,7 +193,7 @@ function Index() {
         </div>
 
         <div>
-          <Box  mt={"1rem"}>
+          <Box mt={"1rem"}>
             <img
               width={"100%"}
               src="https://www.jiomart.com/images/category/563/girls-20200831.jpg"
@@ -204,7 +206,7 @@ function Index() {
         {/* Hotdeals */}
 
         <div className={styles.hotest}>
-          <h3 class={styles.text}>Hotest Deals</h3>
+          <h3 class={styles.text}>Hottest Deals</h3>
           <div className={styles.hotestD}>
             {WowDeal.map((elem) => (
               <div className="deal">
@@ -213,6 +215,7 @@ function Index() {
                   style={{ borderRadius: "0.5rem" }}
                   src={elem.image}
                   alt="deals_n"
+                  width="100%"
                 />
               </div>
             ))}
@@ -239,11 +242,15 @@ function Index() {
           </div>
         </Link>
 
-        <div className={styles.posterimg}>
+        <div className={styles.downimg}>
           <div className={styles.abovefooter}>
-            {posterimg.map((poster) => (
+            {posterimg.map((posterItem) => (
               <div className={styles.poster}>
-                <img src={poster.img} alt={poster.n} />
+                <img
+                  src={posterItem.img}
+                  alt={posterItem.n}
+                  className={styles.mmm}
+                />
               </div>
             ))}
           </div>
