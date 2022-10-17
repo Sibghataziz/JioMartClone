@@ -8,16 +8,28 @@ const Basket = ({ cartDetails }) => {
     return (
       <div key={uuidv4()} className='cart-cards'>
         <div>
+<<<<<<< HEAD
+          <img src={product.item_img_url} alt='pr-i' />
+        </div>
+        <div>
+          <section style={{ fontFamily: 'jioMedium', fontSize: '16px' }}>
+            <p>{product.item_name}</p>
+=======
           <img src={product.image} alt='pr-i' />
         </div>
         <div>
           <section style={{ fontFamily: 'jioMedium', fontSize: '16px' }}>
             <p>{product.title}</p>
+>>>>>>> main
           </section>
           <section>
             <p>
               <span style={{ fontFamily: 'jioMedium', fontSize: '18px' }}>
+<<<<<<< HEAD
+                &#8377; {product.item_final_price}
+=======
                 &#8377; {product.cost}
+>>>>>>> main
               </span>
               <span>
                 {product.discount && (
@@ -25,7 +37,11 @@ const Basket = ({ cartDetails }) => {
                     MRP:{' '}
                     {
                       <span style={{ textDecoration: 'line-through' }}>
+<<<<<<< HEAD
+                        &#8377; {product.item_price}
+=======
                         &#8377; {product.mrp}
+>>>>>>> main
                       </span>
                     }{' '}
                   </span>
