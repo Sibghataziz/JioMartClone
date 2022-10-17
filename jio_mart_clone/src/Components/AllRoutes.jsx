@@ -8,7 +8,7 @@ export default function AllRoutes() {
   return (
     <Box>
       <Routes>
-        {/* <Route path="/" element={<Navbar />} /> */}
+      
         <Route path="/products/:product_category" element={<AllProduct />} />
       </Routes>
     </Box>
