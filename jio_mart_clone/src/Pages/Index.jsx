@@ -47,21 +47,21 @@ function Index() {
           />
         </Flex>
 
-        <Box m={2} mt={"1rem"}>
+        <Box m={2} >
           <img
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1662531217_Wednesday_Bonus.jpg"
             alt="lowerBaner "
           />
         </Box>
 
-        <Box m={2} mt={"1.2rem"}>
+        <Box m={2}>
           <img
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1664448687_Image_3.jpg"
             alt=""
           />
         </Box>
 
-        <Box m={2} mt={"0.6rem"}>
+        <Box m={2}  >
           <img
             src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1665072906_Oct-6_Slim-Banner_web.jpg"
             alt=""
@@ -72,7 +72,7 @@ function Index() {
         {/* if u need Rap it inside the Link */}
         <ShopCategory />
         <Link to="./">
-          <Box m={2} mt={"1.3rem"}>
+          <Box m={2}  mt={'1rem'} >
             <img
               src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1624041574_web_static.jpg"
               alt=""
@@ -85,7 +85,7 @@ function Index() {
         <RecomendedSlide />
 
         <div>
-          <Box m={2} mt={"1.3rem"}>
+          <Box m={2} mt={"-0.4rem"} >
             <Img
               src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1665657938_Fav-Delicacies-1680-320.jpg"
               alt=""
@@ -188,9 +188,9 @@ function Index() {
         </div>
 
         <div>
-          <Box ml={"0.8rem"} mt={"2rem"}>
+          <Box ml={"0.6rem"}  mt={"1rem"}>
             <img
-              width={"99%"}
+              width={"99.3%"}
               src="https://www.jiomart.com/images/category/563/girls-20200831.jpg"
               alt=""
             />

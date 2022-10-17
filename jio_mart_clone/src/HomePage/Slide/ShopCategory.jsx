@@ -31,7 +31,7 @@ function ShopCategory() {
       </Link>
       <div className={styles.forflex}>
         <div onClick={() => sliderRef.current.slickPrev()}></div>
-        <Box bg="white" w="98%" ml={"1rem"}>
+        <Box bg="white" w="98%" ml={'0.8rem'}>
           <Carousel breakPoints={breakPoints}>
             {shopCategory.map((item) => (
               <Box

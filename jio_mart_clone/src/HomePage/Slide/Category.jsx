@@ -11,7 +11,7 @@ function Categorydata() {
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 406, itemsToShow: 3, itemsToScroll: 3 },
-    { width: 800, itemsToShow: 5, itemsToScroll: 5 },
+    { width: 800, itemsToShow: 5.5, itemsToScroll: 5 },
     { width: 1200, itemsToShow: 5, itemsToScroll: 5 },
   ];
   const sliderRef = useRef(null);
@@ -23,7 +23,7 @@ function Categorydata() {
 
   return (
     <div>
-      <Box mt={'1rem'} mb={"1rem"}>
+      <Box mt={'1rem'} mb={"1rem"} >
         <Text as={"b"} fontSize="xl" m={"3rem"}>
           Shop by Categories
         </Text>
@@ -33,7 +33,7 @@ function Categorydata() {
         <div
           onClick={() => sliderRef.current.slickPrev()}
         ></div>
-        <Box bg="white" w="98%" ml={'1rem'}>
+        <Box bg="white" w="98%" ml={'0.8rem'} >
           <Carousel breakPoints={breakPoints}>
             {categorydata.map((item) => (
               <Box
