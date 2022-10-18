@@ -142,7 +142,7 @@ export default function ProductDetails() {
             <Box w="75%">
               <Box width='100%'>
                 {" "}
-                <Image boxShadow="lg" src={product.item_img_url} />{" "}
+                <Image boxShadow="lg" src={product.item_img_url} width="100%" />{" "}
               </Box>
             </Box>
           </Flex>

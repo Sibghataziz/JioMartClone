@@ -8,23 +8,35 @@ import {
   Spacer,
   Text,
 } from "@chakra-ui/react";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { CgProfile } from "react-icons/cg";
 import { BsCalendar2Check } from "react-icons/bs";
 import { MdLocationOn } from "react-icons/md";
 import { BsCreditCardFill } from "react-icons/bs";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { logout } from "../Redux/Login/action";
+import { GetData } from "../Utils/localStorage";
+import OrderList from "../Components/OrdersList"
 
 const AccountPage = () => {
   const { isAuth } = useSelector((state) => state.auth);
   const navigate = useNavigate();
+  const dispatch = useDispatch()
+  const [orders, setOrders] = useState([])
+  // console.log(orders)
+
+  const handleLogout = () =>{
+    dispatch(logout())
+    navigate("/account/login")
+  }
 
   useEffect(() => {
-    console.log(isAuth)
+    // console.log(isAuth)
     if (!isAuth) {
       navigate("/account/login");
     }
+    setOrders(GetData("JioMartCloneOrders"))
   }, []);
 
   return (
@@ -204,11 +216,15 @@ const AccountPage = () => {
             </Text>
           </Box>
           <hr />
-          <Box p={"20px"}>
+          <Box p={"20px"} onClick={handleLogout}>
             <Text fontSize={"sm"} as={"b"}>
               Logout
             </Text>
           </Box>
+        </GridItem>
+
+        <GridItem w="120%" ml='-28' >
+          {orders.map((order,index)=> <OrderList key={index} order={order} visible={false}/>)}
         </GridItem>
       </Grid>
     </Box>

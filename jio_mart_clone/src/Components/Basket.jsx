@@ -3,9 +3,8 @@ import { v4 as uuidv4 } from 'uuid';
 import './Basket.css';
 import { PlusMinusBtn } from './JioButton';
 
-const Basket = ({ cartDetails }) => {
+const Basket = ({ cartDetails , visible=true }) => {
   const cards = cartDetails.products.map((product) => {
-    console.log(product)
     return (
       <div key={uuidv4()} className='cart-cards'>
         <div>
@@ -34,9 +33,9 @@ const Basket = ({ cartDetails }) => {
               </span>
             </p>
           </section>
-          <section style={{ textAlig: 'right' }}>
+          {visible && <section style={{ textAlig: 'right' }}>
             <PlusMinusBtn product={product} />
-          </section>
+          </section>}
         </div>
       </div>
     );

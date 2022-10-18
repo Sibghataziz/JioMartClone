@@ -1,5 +1,5 @@
 export default function useAPICall() {
-  const baseUrl = `http://localhost:3001`;
+  const baseUrl = `https://jiomartclone-backend.herokuapp.com`;
   
   const postData = async (url, input) => {
     try {

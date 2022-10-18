@@ -1,5 +1,6 @@
 import { ORDER_CONFIRMED, REMOVE_FROM_CART, UPDATE_CART } from "./action_types";
 import { omit, uniq } from "lodash";
+import { GetData, Setdata } from "../../Utils/localStorage";
 
 const initialState = JSON.parse(localStorage.getItem("cart")) || {
   cartItems: {},
@@ -33,6 +34,9 @@ export const cartReducer = (state = initialState, action) => {
       return data2;
 
     case ORDER_CONFIRMED:
+      let orders = GetData("JioMartCloneOrders") || []
+      orders = [...orders,state.cartItems]
+      Setdata("JioMartCloneOrders",orders)
       let data3 = {
         cartItems: {},
         additionHistory: [],

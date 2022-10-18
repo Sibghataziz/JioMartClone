@@ -37,6 +37,6 @@ const enhancer = composeEnhancers(middlewares);
 
 export const store = createStore(rootReducer, enhancer);
 
-store.subscribe(() => {
-  console.log("store got updated", store.getState());
-});
+// store.subscribe(() => {
+//   console.log("store got updated", store.getState());
+// });

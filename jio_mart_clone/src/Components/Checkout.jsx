@@ -6,7 +6,7 @@ import Basket from "./Basket";
 import { updateCart } from "../Redux/Cart/actions";
 import { useNavigate, useParams } from "react-router-dom";
 const Checkout = () => {
-  // const isAuth = useSelector((store) => store.Auth.isAuth);
+  const { isAuth } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const [state, setState] = useState(0);
   const { id } = useParams();
@@ -176,8 +176,7 @@ const Checkout = () => {
             ) : id === "cart" ? (
               <button
                 onClick={() =>
-                  // isAuth
-                  true ? navigate("/checkout/review") : navigate("/login")
+                  isAuth  ? navigate("/checkout/review") : navigate("/account/login")
                 }
               >
                 {"Place Order"}

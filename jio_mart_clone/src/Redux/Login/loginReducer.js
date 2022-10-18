@@ -1,8 +1,9 @@
-import { GetData, Setdata } from "../../Utils/localStorage";
+import { GetData, RemoveData, Setdata } from "../../Utils/localStorage";
 import {
   LOGIN_FAILURE,
   LOGIN_LOADING,
   LOGIN_SUCCESS,
+  LOGOUT,
   REGISTER_FAILURE,
   REGISTER_LOADING,
   REGISTER_SUCCESS,
@@ -66,6 +67,16 @@ export const loginReducer = (state = initState, action) => {
         isRegisterLoading: false,
         isRegister: null,
       };
+
+    case LOGOUT:
+      RemoveData("JioMartCloneUser");
+      return {
+        ...state,
+        isAuth: null,
+        isLogLoading: false,
+        isLogError: false,
+      };
+
     default:
       return state;
   }

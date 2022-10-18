@@ -104,7 +104,6 @@ const Navbar = () => {
                 color="white"
                 cursor={"pointer"}
                 mr={"8px"}
-                width={28}
                 >
                 <img
                   src="https://www.jiomart.com/msassets/images/icons/loginicon_be.svg"
@@ -112,12 +111,12 @@ const Navbar = () => {
                   width="24px"
                   alt=""
                 />
-                {isAuth ? "My Account" : "SignIn"}
+                {isAuth ? "Account" : "SignIn"}
               </Box>
             </Link>
 
             <Link to="/checkout/cart">
-              <Box display={"flex"} color="white" cursor={"pointer"} pl={["20px"]} width={28}>
+              <Box display={"flex"} color="white" cursor={"pointer"} pl={["20px"]} >
                 <img
                   src="	https://www.jiomart.com/msassets/images/icons/cart-white.svg"
                   height="24px"

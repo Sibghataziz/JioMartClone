@@ -40,7 +40,7 @@ export default function SignIn_SignUp() {
     setOtp(Math.floor(100000 + Math.random() * 900000));
   }, []);
 
-  console.log(otp)
+  // console.log(otp)
 
   return (
     <Box bg="#F6F6F7" pt={10} pb={5}>

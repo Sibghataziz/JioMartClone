@@ -6,6 +6,7 @@ import {
   REGISTER_LOADING,
   REGISTER_SUCCESS,
   REGISTER_FAILURE,
+  LOGOUT,
 } from "./actionTypes";
 
 // const {getData, postData } =useAPICall()
@@ -47,6 +48,12 @@ export const registerFailure = () => {
     type: REGISTER_FAILURE,
   };
 };
+
+export const logout = () => {
+  return {
+    type : LOGOUT
+  }
+}
 
 export const Login = (url) => async (dispatch) => {
   try {
