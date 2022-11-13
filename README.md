@@ -56,8 +56,7 @@
 > ### Payment Details 
 ![image](https://user-images.githubusercontent.com/106476212/183394233-e22dcbf2-3215-4f22-bcf0-b44bf8b280aa.png)
 
-> ### Select type of pay 
-![image](https://user-images.githubusercontent.com/106476212/183394273-150ccefe-9eee-456c-a6e5-8dee5119a726.png)
+
 
 > ### Wait for payment 5s 
 ![image](https://user-images.githubusercontent.com/106476212/183394299-38d569e0-0f11-4907-a357-8a26e9295ab4.png)
@@ -65,16 +64,13 @@
 
 > ### Payment Done 
 
-![14.png]![image](https://user-images.githubusercontent.com/106476212/183394337-68fbd256-40ec-4a9e-8fbe-f8328b9bc502.png)
-
-> ### Return to home page **
 
 
 
 # Project
 > GitHub - [Code](https://github.com/sukhdev-bajiya/jiomart_clone) <br>
-> Netlify - [Live demo](https://jio-mart-clone05.netlify.app) <br>
-> Hash node - [Blog](https://jiomart-clone.hashnode.dev/jiomartclone)
+> Netlify - [Live demo](https://comfy-souffle-7dba03.netlify.app/) <br>
+> Hash node - [Blog](https://alokkumar.hashnode.dev/jio-mart-clone)
 
 # Technology Used
 > • HTML <br>
