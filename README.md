@@ -68,7 +68,7 @@
 
 
 # Project
-> GitHub - [Code](https://github.com/sukhdev-bajiya/jiomart_clone) <br>
+> GitHub - [Code](https://github.com/Sibghataziz/JioMartClone) <br>
 > Netlify - [Live demo](https://comfy-souffle-7dba03.netlify.app/) <br>
 > Hash node - [Blog](https://alokkumar.hashnode.dev/jio-mart-clone)
 
