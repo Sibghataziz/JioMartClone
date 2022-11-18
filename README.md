@@ -58,8 +58,7 @@
 
 
 
-> ### Wait for payment 5s 
-![image](https://user-images.githubusercontent.com/106476212/183394299-38d569e0-0f11-4907-a357-8a26e9295ab4.png)
+
 
 
 > ### Payment Done 
