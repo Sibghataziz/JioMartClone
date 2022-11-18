@@ -1,4 +1,4 @@
-## Netlify Deployed Link - [Live demo](https://comfy-souffle-7dba03.netlify.app/) <br>
+## Netlify Deployed Link - [Live demo](https://jiomaartcopy.netlify.app) <br>
 <br>
 
 ## **JioMart  landing page** 👇 💻 
